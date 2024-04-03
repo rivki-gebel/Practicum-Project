@@ -1,0 +1,42 @@
+<button (click)="toAdd()" matTooltip="Add new Worker" mat-fab extended color="primary">
+    <mat-icon>add</mat-icon>
+    Add 
+  </button>
+<div class="acordion">
+    <mat-accordion class="example-headers-align" multi>
+        <ng-container>
+            @for (emp of  employees$|async; track emp.id) {
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon>account_circle</mat-icon>
+                        {{emp.firstName}}-{{emp.lastName}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Id: {{emp.identityNum}}
+                    </mat-panel-description>
+                    <mat-panel-description>
+                        Start-date: {{emp.startDate | date: 'dd MMMM yyyy'}}
+                    </mat-panel-description>
+                    <mat-panel-description>
+                        Gender: {{ emp.gender === 1 ? 'male' : 'female' }}
+                    </mat-panel-description>
+                    <button mat-icon-button (click)="openDialog($event,emp.id,emp.firstName,emp.lastName)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="editEmployee($event,emp)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </mat-expansion-panel-header>
+                <ng-container>
+                    @for(job of emp.jobs; track job.job){
+                    <p>{{job.job.name}} - {{job.entryDate | date: 'dd MMMM yyyy'}}</p>
+                    }
+                </ng-container>
+            </mat-expansion-panel>
+            }
+        </ng-container>
+    </mat-accordion>
+   
+</div>
+<button mat-raised-button (click)="downloadCSV()">Download CSV</button>
