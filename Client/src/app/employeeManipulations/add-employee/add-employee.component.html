@@ -1,5 +1,5 @@
-
-<h2 id="header">Add new employee</h2>
+<div class="formContainer">
+<h2 id="header">Add new employee</h2><br>
 <mat-stepper [linear]="true" #stepper>
     <mat-step [stepControl]="addEmployeeForm">
         <form [formGroup]="addEmployeeForm">
@@ -36,24 +36,26 @@
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="jobStartDatePicker"></mat-datepicker-toggle>
                 <mat-datepicker #jobStartDatePicker></mat-datepicker>
-            </mat-form-field>
+            </mat-form-field><br>
             
             <mat-button-toggle-group aria-label="Gender" formControlName="gender">
-                <mat-button-toggle value=1>Male</mat-button-toggle>
-                <mat-button-toggle value=2>Female</mat-button-toggle>
+                <mat-button-toggle  value=1>Male</mat-button-toggle>
+                <mat-button-toggle  value=2>Female</mat-button-toggle>
             </mat-button-toggle-group><br>
+
             <div>
                 <button class="nextButton" mat-button matStepperNext>Next</button>
             </div>
         </form>
     </mat-step>
 
-    <mat-step errorMessage="Address is required.">
+    <mat-step>
         <ng-template matStepLabel>Add jobs to employee</ng-template>
 
         @for (form of addEmployeeForm.get('empJobs')['controls']; track form) {
-        <ng-container [formGroup]="form">
-            <mat-form-field>
+            <div class="jobTitle">Job {{ $index + 1 }}</div><br>
+        <ng-container [formGroup]="form" class="addingJobs">
+            <mat-form-field class="jobField">
                 <mat-label>job</mat-label>
                 <mat-select formControlName="job" required>
                     @for(job of jobs; track job){
@@ -62,15 +64,15 @@
                 </mat-select>
             </mat-form-field>
 
-            <mat-form-field>
-                <mat-label>is management</mat-label>
+            <mat-form-field class="jobField">
+                <mat-label>administrative</mat-label>
                 <mat-select formControlName="isManagement">
-                    <mat-option [value]="false">ללא ניהול</mat-option>
-                    <mat-option [value]="true">ניהולי</mat-option>
+                    <mat-option [value]="false">False</mat-option>
+                    <mat-option [value]="true">True</mat-option>
                 </mat-select>
             </mat-form-field>
            
-            <mat-form-field>
+            <mat-form-field class="jobField">
                 <mat-label>Entry date</mat-label>
                 <input matInput [matDatepicker]="entryDatePicker"  formControlName="entryDate"
                   [matDatepickerFilter]="filterStartDate">
@@ -89,7 +91,7 @@
                 <mat-icon>add</mat-icon>Add Job</button>            
         </div>
 
-        <div>
+        <div class="navigatesButtons">
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
         </div>
@@ -98,12 +100,13 @@
 
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
-        <div>
+        <p class="finish-text">You are now done.</p>
+        <div class="finish-buttons">
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
-        <button (click)="submitForm()" type="submit" mat-raised-button color="primary">Save</button>
+            <button (click)="submitForm()" type="submit" mat-raised-button color="primary">Save</button>
+        </div>        
 
     </mat-step>
 </mat-stepper>
+</div>

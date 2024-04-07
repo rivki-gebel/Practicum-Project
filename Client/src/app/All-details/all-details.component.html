@@ -7,32 +7,29 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-
 <div class="head" style="display: flex; justify-content: space-between; align-items: center;">
     <h3 class="title">My Employees</h3>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-            <div class="d-flex justify-content-center ">
-            <div class="searchbar">
-                <input class="search_input" type="text" name="" placeholder="Search..." #searchInput>
-                <div class="search_icon searchButton"><i class="fas fa-search"></i></div>
-            </div>
+    <div class="d-flex justify-content-center ">
+        <div class="searchbar">
+            <input class="search_input" type="text" placeholder="Search..." #searchInput>
+            <div class="search_icon searchButton"><i class="fas fa-search"></i></div>
         </div>
+    </div>
 
     <div class="buttons">
         <button (click)="toAdd()" class="add-button" matTooltip="Add new Worker" mat-raised-button>
             <mat-icon>add</mat-icon>Add
         </button>
         <button class="downloadButton" mat-raised-button (click)="downloadCSV()" matTooltip="Download CSV"
-            class="download-button">csv
+            >download
             <mat-icon>download</mat-icon>
         </button>
     </div>
 </div>
 <hr>
-
-
 
 <div class="allDetailsTable">
     <div class="acordion">
@@ -40,10 +37,11 @@
             <ng-container>
                 <mat-card class="headerCard">
                     <mat-card-content class="details-header">
-                        <p>First-name:</p>
-                        <p>Last-name:</p>
-                        <p>Id-Number:</p>
-                        <p>Start-date:</p>
+                        <b>First-name:</b>
+                        <b>Last-name:</b>
+                        <b>Id-Number:</b>
+                        <b>Start-date:</b>
+                        <b>Delete/Edit</b>
                     </mat-card-content>
                 </mat-card>
                 @for (emp of filteredEmployees$ |async; track emp.id) {
@@ -71,6 +69,7 @@
                             <mat-icon class="icon">edit</mat-icon>
                         </button>
                     </mat-expansion-panel-header>
+
                     <!-- lazy loading -->
                     <ng-template matExpansionPanelContent>
                         @for(job of emp.jobs; track job.job){
@@ -82,12 +81,14 @@
                 }
             </ng-container>
         </mat-accordion>
+
         @if(this.arrayLength === 0) {
         <div class="no-results-message">
             <mat-icon>search_icon</mat-icon>
             No matching items found
         </div>
         }
+
 
     </div>
 </div>

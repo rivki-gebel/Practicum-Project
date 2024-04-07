@@ -1,22 +1,37 @@
-
-mat-stepper{
-    width: 90%;
+.mat-stepper {
+    width: 65%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
-#header{
+
+.formContainer {
+    width: 60%; 
+    margin: 0 auto;
+    height: 100%;
+    padding-right: 20%;
+    padding-left: 20%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    margin-top: 2%;
+}
+
+#header {
     text-align: center;
     font-family: Helvetica;
-    width: auto;    
+    width: auto;
 }
-.addButton{
+
+.addButton {
     width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
-mat-form-field {
+
+.mat-form-field {
     width: 100%;
     margin-bottom: 16px;
 }
@@ -30,11 +45,13 @@ mat-form-field {
 .names mat-form-field {
     width: 48%;
 }
-.privateDetails{
+
+.privateDetails {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
 }
+
 .privateDetails mat-form-field {
     width: 48%;
 }
@@ -53,7 +70,6 @@ mat-form-field {
 
 .addButton {
     margin-top: 16px;
-    width: 100%;
 }
 
 .button-container {
@@ -61,13 +77,47 @@ mat-form-field {
     margin-top: 16px;
 }
 
-mat-stepper {
-    width: 55%;
-    margin: auto;
-}
-.nextButton{
+.nextButton {
     margin-left: 90%;
 }
-form{
+
+form {
     margin-top: 5%;
+}
+
+.jobField {
+    width: auto;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.addingJobs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigatesButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6%;
+}
+
+.navigatesButtons button {
+    margin-left: 5px;
+}
+.finish-buttons {
+    margin-top: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.finish-buttons button {
+    margin: 0 10px;
+}
+.finish-text{
+    margin-top: 40%;
+    text-align: center;
 }

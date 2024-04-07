@@ -3,68 +3,43 @@
   align-items: center;
   width: fit-content;
 }
-
 .example-headers-align .mat-mdc-form-field+.mat-mdc-form-field {
   margin-left: 8px;
 }
-
 .acordion {
   width: 90%;
   display: block;
   margin-right: auto;
   margin-left: auto;
   margin-top: 5%;
+  margin-bottom: 10%;
 }
 .searchbar {
-  margin-top: 2%;
-  height: 40px;
-  background-color: lightgrey; 
-  border-radius: 20px;
-  padding: 5px;
+  position:fixed;
+  width: 25%;
+  top: -12%;
 }
-
 .search_input {
-  color: grey;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  line-height: 30px;
-  transition: width 0.2s linear;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
 }
-
-.searchbar:hover > .search_input {
-  padding: 0 5px;
-  width: 250px;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_icon {
-  background: white;
-  color: rgb(49, 49, 49);
-}
-
 .search_icon {
-  height: 30px;
-  width: 30px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: rgb(49, 49, 49);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 .details-header {
-  margin-left: 1.5%;
-  width:89%;
+  margin-left: 1%;
+  width:97%;
   display: flex;
-  justify-content:left;
-   
+  justify-content: space-between;
 }
-
 .details-header p {  
-  width:min-content;
-  flex: 1;
   text-align: left;
   align-items: center;
 }
@@ -72,7 +47,6 @@
   display: flex;
   align-items: center;
 }
-
 .mat-expansion-panel-header-description p {
   margin: 0;
   padding: 5px;
@@ -81,7 +55,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  }
+}
 .icon {
   color: gray; /* Set the color to gray */
 }
@@ -93,20 +67,22 @@
   text-align: center;
 }
 .add-button{
-    color: rgb(32, 142, 227) !important;
-    margin-right: 7px;
+   margin-right: 7px;
+   
 }
 .downloadButton{
-  background-color: rgb(32, 142, 227) !important;
+  background-color: lightgray !important;
 }
 .head{
   width: 90%;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 3%;
 }
 .allDetailsTable{
   max-height: 80%;
   overflow-y: auto;
   scrollbar-width: thin;
+  margin-bottom: 5%;
 }

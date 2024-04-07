@@ -1,6 +1,27 @@
+<div class="navbar"> 
+  <button mat-icon-button >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <button mat-icon-button >
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-icon-button  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+</div>
 <div class="background">
-  <img class="logo" src="../../assets/logoWhite.png">
     <div class="contextContainer">
-        <router-outlet></router-outlet>
-    </div>
+    @defer {
+    <router-outlet></router-outlet>
+    }
+    @placeholder {
+    <p>Loading...</p>
+    } @loading(minimum 2s) {
+    <mat-spinner class="spinner" color="primary">
+    </mat-spinner>
+    }
+  </div>
 </div>

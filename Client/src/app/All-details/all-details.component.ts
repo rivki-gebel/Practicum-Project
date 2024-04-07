@@ -1,4 +1,4 @@
-import {  AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Employee } from '../Employee/employeeModel';
 import { EmployeeService } from '../Employee/employee.service';
@@ -10,29 +10,31 @@ import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component'
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatCardModule} from '@angular/material/card';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-all-details',
   standalone: true,
   imports: [CommonModule, MatAccordion, MatExpansionModule, MatIconModule, MatButtonModule, MatPaginatorModule,
-    MatTooltipModule,MatCardModule],
+    MatTooltipModule, MatCardModule],
   templateUrl: './all-details.component.html',
   styleUrl: './all-details.component.css',
 })
-export class AllDetailsComponent implements OnInit,AfterViewInit {
+export class AllDetailsComponent implements OnInit, AfterViewInit {
   employees$: Observable<Employee[]>;
   filteredEmployees$: Observable<Employee[]>;
-  arrayLength:number;
-  constructor(private _employeeService: EmployeeService, public dialog: MatDialog,private router:Router,
+  arrayLength: number;
+  constructor(private _employeeService: EmployeeService, public dialog: MatDialog, private router: Router,
     private _snackBar: MatSnackBar
   ) { }
+
   @ViewChild('searchInput') searchInput: ElementRef;
-  ngOnInit(): void {    
-    this.employees$ = this._employeeService.getEmployeeListObservable(); 
-    this.filteredEmployees$ = this.employees$; // Initialize filteredEmployees$ with all employees
+  
+  ngOnInit(): void {
+    this.employees$ = this._employeeService.getEmployeeListObservable();
+    this.filteredEmployees$ = this.employees$;
     this.filteredEmployees$.subscribe(filteredEmployees => {
       this.arrayLength = filteredEmployees.length;
     });
@@ -54,7 +56,7 @@ export class AllDetailsComponent implements OnInit,AfterViewInit {
       map((employees: Employee[]) => {
         if (!searchTerm.trim()) {
           return employees; // Show full list when search term is empty
-        }  
+        }
         const lowerCaseSearchTerm = searchTerm.toLowerCase().trim();
         return employees.filter(emp =>
           emp.firstName.toLowerCase().includes(lowerCaseSearchTerm) ||
@@ -71,29 +73,29 @@ export class AllDetailsComponent implements OnInit,AfterViewInit {
     });
   }
 
-  openDeleteDialog(event: Event,id: number, firstName: string, lastName: string): void {
+  openDeleteDialog(event: Event, id: number, firstName: string, lastName: string): void {
     event.stopPropagation();
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: { id, firstName, lastName },
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this._employeeService.deleteEmployee(id).subscribe();
         this._snackBar.open("Deleted successfully!", "Ok", {
-          horizontalPosition:'left',
-          duration:3000
+          horizontalPosition: 'left',
+          duration: 3000
         })
       }
     });
   }
-  editEmployee(event: Event,employee:Employee) {
+  editEmployee(event: Event, employee: Employee) {
     event.stopPropagation();
-    this._employeeService.employeeToEdit=employee; 
+    this._employeeService.employeeToEdit = employee;
     this.router.navigate(['/edit-employee'])
-    
+
   }
-  
+
   downloadCSV() {
     const csvRows = [];
     const header = ['First Name', 'Last Name', 'Identity Number', 'Start Date'];
@@ -121,9 +123,8 @@ export class AllDetailsComponent implements OnInit,AfterViewInit {
       window.URL.revokeObjectURL(url);
     });
   }
-  
-  toAdd()
-  {
+
+  toAdd() {
     this.router.navigate(['/add-employee'])
   }
 }

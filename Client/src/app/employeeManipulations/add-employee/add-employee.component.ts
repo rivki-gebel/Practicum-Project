@@ -15,7 +15,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrl: './add-employee.component.css',
-
 })
 export class AddEmployeeComponent implements OnInit {
   public addEmployeeForm: FormGroup;
@@ -25,16 +24,15 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
     this.addEmployeeForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(5)]],
+      firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', Validators.required],
       identityNum: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('^[0-9]*$')]],
       startDate: [new Date(), Validators.required],
       birthDate: [Validators.required],
       gender: [0, Validators.required],
       empJobs: this.fb.array([] as EmployeeJob[]),
-
     });
-
+    
     this._jobsService.getJobsList().subscribe({
       next: (res) => {
         this.jobs = res;
@@ -43,9 +41,7 @@ export class AddEmployeeComponent implements OnInit {
         console.log(err);
       }
     })
-
   }
-
   constructor(private formBuilder: FormBuilder, private _employeeService: EmployeeService, private _employeeJobService: EmployeeJobService,
     private fb: FormBuilder, private _jobsService: JobService, private router: Router,  private _snackBar: MatSnackBar) {
   }
@@ -79,9 +75,8 @@ export class AddEmployeeComponent implements OnInit {
         });
       });
     });
-
     this.router.navigate(['/all-details'])
-    this._snackBar.open("Added successfully!", "Ok", {
+    this._snackBar.open("successfully updated!", "Ok", {
       horizontalPosition:'left',
       duration:3000
     })
@@ -102,7 +97,6 @@ export class AddEmployeeComponent implements OnInit {
         this.selectedJobs.push(value);
       }
     });
-
     empJobs.push(jobForm);
   }
 

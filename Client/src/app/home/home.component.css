@@ -1,5 +1,5 @@
 .background {
-    background-color: rgb(206, 225, 241);
+    background-color: rgb(239, 245, 250);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,20 +11,34 @@
 .contextContainer {  
     position: fixed;
     top: 60%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 85vw !important;
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
     z-index: 15;
     height: 90%;   
-    
-   
+  
 }
 .logo{
     position: fixed;
     height:7%;
     margin-left: 5%;
     margin-top: 2%;
+}
+.spinner{
+    color: rgb(32, 142, 227) !important;
+    position: fixed  !important;
+    top: 50%  !important;
+    left: 50%  !important;
+    transform: translate(-50%, -50%)  !important;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px; /* Adjust width as needed */
+    background-color: rgb(237, 237, 237);
+    z-index: 10;
 }

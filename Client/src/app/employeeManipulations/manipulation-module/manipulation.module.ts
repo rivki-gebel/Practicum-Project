@@ -17,12 +17,13 @@ import { ManipulationRoutingModule } from '../manipulation.routing/manipulation.
 import {
  MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose,
 } from '@angular/material/dialog';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [EditEmloyeeComponent,AddEmployeeComponent],
   imports: [
     CommonModule,MatSelectModule,MatButtonToggleModule,MatDatepickerModule,MatIconModule,MatTooltipModule
     ,MatButtonModule,MatInputModule,MatFormFieldModule,MatStepperModule,MatCardModule,ReactiveFormsModule,
-    ManipulationRoutingModule,MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose
+    ManipulationRoutingModule,MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose,MatSlideToggleModule
   ]
 })
 export class ManipulationModule { }
