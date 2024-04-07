@@ -9,48 +9,104 @@
 }
 
 .acordion {
-  width: 70%;
+  width: 90%;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .searchbar {
   margin-top: 2%;
-  height: 60px;
-  background-color: #1a6cbe; 
-  border-radius: 30px;
-  padding: 10px;
+  height: 40px;
+  background-color: lightgrey; 
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .search_input {
-  color: white;
+  color: grey;
   border: 0;
   outline: 0;
   background: none;
   width: 0;
-  line-height: 40px;
-  transition: width 0.4s linear;
+  line-height: 30px;
+  transition: width 0.2s linear;
 }
 
 .searchbar:hover > .search_input {
-  padding: 0 10px;
-  width: 450px;
+  padding: 0 5px;
+  width: 250px;
   transition: width 0.4s linear;
 }
 
 .searchbar:hover > .search_icon {
   background: white;
-  color: #1a6cbe; ;
+  color: rgb(49, 49, 49);
 }
 
 .search_icon {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   float: right;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color: white;
+  color: rgb(49, 49, 49);
+}
+.details-header {
+  margin-left: 1.5%;
+  width:89%;
+  display: flex;
+  justify-content:left;
+   
+}
+
+.details-header p {  
+  width:min-content;
+  flex: 1;
+  text-align: left;
+  align-items: center;
+}
+.mat-expansion-panel-header-description {
+  display: flex;
+  align-items: center;
+}
+
+.mat-expansion-panel-header-description p {
+  margin: 0;
+  padding: 5px;
+}
+.nameContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+.icon {
+  color: gray; /* Set the color to gray */
+}
+.headerCard{
+  height: 8vh;
+  margin-bottom: 2%;
+}
+.no-results-message{
+  text-align: center;
+}
+.add-button{
+    color: rgb(32, 142, 227) !important;
+    margin-right: 7px;
+}
+.downloadButton{
+  background-color: rgb(32, 142, 227) !important;
+}
+.head{
+  width: 90%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.allDetailsTable{
+  max-height: 80%;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }

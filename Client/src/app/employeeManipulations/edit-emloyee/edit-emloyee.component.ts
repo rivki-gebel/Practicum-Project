@@ -60,11 +60,9 @@ export class EditEmloyeeComponent {
         console.log(err);
       }
     })
-
   }
 
   submitForm() {
-    console.log("real emp id:", this.employeeToEdit.id);
     const employeeemployeeToEdit = this.editEmployeeForm.value;
     let newEmployee: PostEmployee = {
       firstName: employeeemployeeToEdit.firstName,
@@ -76,8 +74,7 @@ export class EditEmloyeeComponent {
     }
     // Send employee employeeToEdit to the server
     this._employeeService.updateEmployee(this.employeeToEdit.id, newEmployee).subscribe((updatedEmployee: Employee) => {
-      console.log('Employee created:', updatedEmployee);
-      console.log("updated emp id:", updatedEmployee.id);
+      console.log('Employee updated date:', updatedEmployee.startDate);
       // Extract and send each job employeeToEdit to the server separately
       const empJobsFormArray = this.editEmployeeForm.get('empJobs') as FormArray;
       empJobsFormArray.controls.forEach(jobForm => {
@@ -110,13 +107,9 @@ export class EditEmloyeeComponent {
             console.log('New job added:', createdJob);
             this._employeeService.getEmployeesList().subscribe();
           });
-
         }
       });
-
-
     });
-
     this.router.navigate(['/all-details']);
   }
 
@@ -127,10 +120,12 @@ export class EditEmloyeeComponent {
       entryDate: ['', Validators.required],
       isManagement: [0, Validators.required]
     });
-
     const empJobs = this.editEmployeeForm.get('empJobs') as FormArray;
     jobForm.get('job').valueChanges.subscribe((value) => {
       if (value) {
+        this.selectedJobs = this.selectedJobs.filter(jobId => {
+          return empJobs.controls.some(control => control.get('job').value === jobId);
+        });
         this.selectedJobs.push(value);
       }
     });
@@ -164,8 +159,8 @@ export class EditEmloyeeComponent {
   }
 
   filterStartDate = (date: Date): boolean => {
-    const startDate = this.editEmployeeForm.get('startDate').value;
-    return startDate || date >= startDate;
+    const startDate = new Date(this.editEmployeeForm.get('startDate').value);
+    return !startDate || date >= startDate;
   };
 }
 

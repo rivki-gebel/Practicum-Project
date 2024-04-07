@@ -1,0 +1,30 @@
+.background {
+    background-color: rgb(206, 225, 241);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.contextContainer {  
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 15;
+    height: 90%;   
+    
+   
+}
+.logo{
+    position: fixed;
+    height:7%;
+    margin-left: 5%;
+    margin-top: 2%;
+}

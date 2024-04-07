@@ -1,7 +1,6 @@
 
 <h1 id="header">Edit Workers Details</h1>
-<mat-stepper  #stepper>
-
+<mat-stepper [linear]="false" #stepper>
     <mat-step [stepControl]="editEmployeeForm">
         <form [formGroup]="editEmployeeForm">
             <ng-template matStepLabel>Fill out employee details</ng-template>
@@ -45,7 +44,7 @@
             </mat-form-field>
 
             <div>
-                <button mat-button matStepperNext>Next</button>
+                <button mat-button matStepperNext >Next</button>
             </div>
         </form>
     </mat-step>

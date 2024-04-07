@@ -9,6 +9,7 @@ import { PostEmployee } from '../../Employee/postEmployeeModel';
 import { PostEmployeeJobModel } from '../../EmployeeJob/postEmployeeJobModel';
 import { JobService } from '../../Job/job.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-employee',
@@ -46,7 +47,7 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   constructor(private formBuilder: FormBuilder, private _employeeService: EmployeeService, private _employeeJobService: EmployeeJobService,
-    private fb: FormBuilder, private _jobsService: JobService, private router: Router) {
+    private fb: FormBuilder, private _jobsService: JobService, private router: Router,  private _snackBar: MatSnackBar) {
   }
 
   submitForm() {
@@ -79,29 +80,25 @@ export class AddEmployeeComponent implements OnInit {
       });
     });
 
-
     this.router.navigate(['/all-details'])
+    this._snackBar.open("Added successfully!", "Ok", {
+      horizontalPosition:'left',
+      duration:3000
+    })
   }
 
   addJobForm(): void {
     const jobForm = this.fb.group({
       job: [null, Validators.required],
       entryDate: ['', Validators.required],
-      isManagement: [0, Validators.required]
+      isManagement: [false, Validators.required]
     });
-
     const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
-    if (!empJobs) {
-      console.error('empJobs is not defined');
-      return;
-    }
-
     jobForm.get('job').valueChanges.subscribe((value) => {
       if (value) {
-        if (!this.selectedJobs) {
-          console.error('selectedJobs is not defined');
-          return;
-        }
+        this.selectedJobs = this.selectedJobs.filter(jobId => {
+          return empJobs.controls.some(control => control.get('job').value === jobId);
+        });
         this.selectedJobs.push(value);
       }
     });
@@ -109,10 +106,12 @@ export class AddEmployeeComponent implements OnInit {
     empJobs.push(jobForm);
   }
 
-  removeJobForm(index: number): void {
-    const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
-    empJobs.removeAt(index);
-  }
+removeJobForm(index: number): void {
+  const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
+  const removedJob = empJobs.at(index).get('job').value;
+  empJobs.removeAt(index);
+  this.selectedJobs = this.selectedJobs.filter(jobId => jobId !== removedJob);
+ }
 
   filterStartDate = (date: Date): boolean => {
     const startDate = this.addEmployeeForm.get('startDate').value;

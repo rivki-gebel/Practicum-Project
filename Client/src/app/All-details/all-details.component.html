@@ -1,64 +1,93 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+
+
+<div class="head" style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 class="title">My Employees</h3>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+            <div class="d-flex justify-content-center ">
+            <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search..." #searchInput>
+                <div class="search_icon searchButton"><i class="fas fa-search"></i></div>
+            </div>
         </div>
-      </div>
+
+    <div class="buttons">
+        <button (click)="toAdd()" class="add-button" matTooltip="Add new Worker" mat-raised-button>
+            <mat-icon>add</mat-icon>Add
+        </button>
+        <button class="downloadButton" mat-raised-button (click)="downloadCSV()" matTooltip="Download CSV"
+            class="download-button">csv
+            <mat-icon>download</mat-icon>
+        </button>
     </div>
-
-
-
-<button (click)="toAdd()" matTooltip="Add new Worker" mat-fab extended color="primary">
-    <mat-icon>add</mat-icon>
-    Add 
-  </button>
-<div class="acordion">
-    <mat-accordion class="example-headers-align" multi>
-        <ng-container>
-            @for (emp of  employees$|async; track emp.id) {
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <mat-icon>account_circle</mat-icon>
-                        {{emp.firstName}}-{{emp.lastName}}
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        Id: {{emp.identityNum}}
-                    </mat-panel-description>
-                    <mat-panel-description>
-                        Start-date: {{emp.startDate | date: 'dd MMMM yyyy'}}
-                    </mat-panel-description>
-                    <mat-panel-description>
-                        Gender: {{ emp.gender === 1 ? 'male' : 'female' }}
-                    </mat-panel-description>
-                    <button mat-icon-button (click)="openDialog($event,emp.id,emp.firstName,emp.lastName)">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                    <button mat-icon-button (click)="editEmployee($event,emp)">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                </mat-expansion-panel-header>
-                <ng-container>
-                    @for(job of emp.jobs; track job.job){
-                    <p>{{job.job.name}} - {{job.entryDate | date: 'dd MMMM yyyy'}}</p>
-                    }
-                </ng-container>
-            </mat-expansion-panel>
-            }
-        </ng-container>
-    </mat-accordion>
-   
 </div>
-<button mat-raised-button (click)="downloadCSV()">Download CSV</button>
+<hr>
+
+
+
+<div class="allDetailsTable">
+    <div class="acordion">
+        <mat-accordion class="example-headers-align" multi>
+            <ng-container>
+                <mat-card class="headerCard">
+                    <mat-card-content class="details-header">
+                        <p>First-name:</p>
+                        <p>Last-name:</p>
+                        <p>Id-Number:</p>
+                        <p>Start-date:</p>
+                    </mat-card-content>
+                </mat-card>
+                @for (emp of filteredEmployees$ |async; track emp.id) {
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-description>
+                            <div class="nameContainer">
+                                <mat-icon>account_circle</mat-icon>
+                                <p>{{emp.firstName}}</p>
+                            </div>
+                        </mat-panel-description>
+                        <mat-panel-description>
+                            <p>{{emp.lastName}}</p>
+                        </mat-panel-description>
+                        <mat-panel-description>
+                            <p>{{emp.identityNum}}</p>
+                        </mat-panel-description>
+                        <mat-panel-description>
+                            <p>{{emp.birthDate | date: 'dd MMMM yyyy'}}</p>
+                        </mat-panel-description>
+                        <button mat-icon-button (click)="openDeleteDialog($event,emp.id,emp.firstName,emp.lastName)">
+                            <mat-icon class="icon">delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="editEmployee($event,emp)">
+                            <mat-icon class="icon">edit</mat-icon>
+                        </button>
+                    </mat-expansion-panel-header>
+                    <!-- lazy loading -->
+                    <ng-template matExpansionPanelContent>
+                        @for(job of emp.jobs; track job.job){
+                        <p>{{job.job.name}} - {{job.entryDate | date: 'dd MMMM yyyy'}}</p>
+                        }
+                    </ng-template>
+
+                </mat-expansion-panel>
+                }
+            </ng-container>
+        </mat-accordion>
+        @if(this.arrayLength === 0) {
+        <div class="no-results-message">
+            <mat-icon>search_icon</mat-icon>
+            No matching items found
+        </div>
+        }
+
+    </div>
+</div>

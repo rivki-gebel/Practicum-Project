@@ -13,12 +13,12 @@ namespace Project.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class JobController : ControllerBase
+    public class JobsController : ControllerBase
     {
         private readonly IJobService _jobService;
         private readonly IMapper _mapper;
 
-        public JobController(IJobService jobService,IMapper mapper)
+        public JobsController(IJobService jobService,IMapper mapper)
         {
             _jobService = jobService;
             _mapper = mapper;

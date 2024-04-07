@@ -14,13 +14,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 import { ManipulationRoutingModule } from '../manipulation.routing/manipulation.routing.module';
-
+import {
+ MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose,
+} from '@angular/material/dialog';
 @NgModule({
   declarations: [EditEmloyeeComponent,AddEmployeeComponent],
   imports: [
     CommonModule,MatSelectModule,MatButtonToggleModule,MatDatepickerModule,MatIconModule,MatTooltipModule
     ,MatButtonModule,MatInputModule,MatFormFieldModule,MatStepperModule,MatCardModule,ReactiveFormsModule,
-    ManipulationRoutingModule
+    ManipulationRoutingModule,MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose
   ]
 })
 export class ManipulationModule { }

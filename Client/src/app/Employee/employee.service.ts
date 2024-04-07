@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject, catchError, map, tap, throwError } from 'rxjs';
 import { Employee } from './employeeModel';
 import { PostEmployee } from './postEmployeeModel';
-import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
   
-  private employeeList: BehaviorSubject<Employee[]> = new BehaviorSubject<Employee[]>([]);
+  private employeeList$: BehaviorSubject<Employee[]> = new BehaviorSubject<Employee[]>([]);
   public employeeToEdit: Employee;
 
   constructor(private _http: HttpClient) { 
@@ -18,10 +18,10 @@ export class EmployeeService {
   }
 
   getEmployeesList(): Observable<Employee[]> {
-    return this._http.get<Employee[]>('https://localhost:7159/api/Employee')
+    return this._http.get<Employee[]>('https://localhost:7159/api/Employees')
       .pipe(
         map((response: Employee[]) => {
-          this.employeeList.next(response);
+          this.employeeList$.next(response);
           return response;
         }),
         catchError(error => this.handleError('Error in getting employees list', error))
@@ -29,41 +29,41 @@ export class EmployeeService {
   }
 
   addEmployee(newEmployee: PostEmployee): Observable<Employee> {
-    return this._http.post<Employee>('https://localhost:7159/api/Employee', newEmployee)
+    return this._http.post<Employee>('https://localhost:7159/api/Employees', newEmployee)
       .pipe(
         map((createdEmployee: Employee) => {
-          const currentList = this.employeeList.getValue();
+          const currentList = this.employeeList$.getValue();
           currentList.push(createdEmployee);
-          this.employeeList.next(currentList);
+          this.employeeList$.next(currentList);
           return createdEmployee;
         }),
-        catchError(error => this.handleError('Error in adding employee', error))
+        catchError(error => this.handleError('Error in adding employees', error))
       );
   }
 
   updateEmployee(id: number, updatedEmployee: PostEmployee): Observable<Employee> {
-    return this._http.put<Employee>(`https://localhost:7159/api/Employee/${id}`, updatedEmployee)
+    return this._http.put<Employee>(`https://localhost:7159/api/Employees/${id}`, updatedEmployee)
       .pipe(
         map((updatedEmployee: Employee) => {
-          const currentList = this.employeeList.getValue();
+          const currentList = this.employeeList$.getValue();
           const index = currentList.findIndex(emp => emp.id === updatedEmployee.id);
           if (index !== -1) {
             currentList[index] = updatedEmployee;
-            this.employeeList.next(currentList);
+            this.employeeList$.next(currentList);
           }
           return updatedEmployee;
         }),
-        catchError(error => this.handleError('Error in updating employee', error))
+        catchError(error => this.handleError('Error in updating employees', error))
       );
   }
 
   deleteEmployee(id: number): Observable<void> {
-    return this._http.delete<void>(`https://localhost:7159/api/Employee/${id}`)
+    return this._http.delete<void>(`https://localhost:7159/api/Employees/${id}`)
       .pipe(
         map(() => {
-          const currentList = this.employeeList.getValue();
+          const currentList = this.employeeList$.getValue();
           const filteredList = currentList.filter(emp => emp.id !== id);
-          this.employeeList.next(filteredList);
+          this.employeeList$.next(filteredList);
         }),
         catchError(error => this.handleError('Error in deleting employee', error))
       );
@@ -74,7 +74,7 @@ export class EmployeeService {
   }
 
   getEmployeeListObservable(): Observable<Employee[]> {
-    return this.employeeList.asObservable();
+    return this.employeeList$.asObservable();
   }
 
 

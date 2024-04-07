@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+2fjxsR8biJw49hJMN08EGJ+Apm+pnDbuVB6kwbKxOD12btdl+Ey9F+AwzsVDgCt+08NkTVJRzVoFrwrJtlWXw==",
+  "dgSpecHash": "koXPh7tz0bS2trF3n8p+4T4hnAk4DW+VIdMOYA1hHKrWuiV+wPZB03iwlGrk0X6fx32G7IIQtcj8yqQSYiKmQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\practicum\\ProjectAPI\\Project.Data\\Project.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\practicum\\Server\\Project.Data\\Project.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -1,34 +1,77 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import {  AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Employee } from '../Employee/employeeModel';
 import { EmployeeService } from '../Employee/employee.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { Observable, map } from 'rxjs';
+import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { MatTableDataSource } from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-all-details',
   standalone: true,
   imports: [CommonModule, MatAccordion, MatExpansionModule, MatIconModule, MatButtonModule, MatPaginatorModule,
-    MatTooltipModule],
+    MatTooltipModule,MatCardModule],
   templateUrl: './all-details.component.html',
   styleUrl: './all-details.component.css',
 })
-export class AllDetailsComponent implements OnInit {
+export class AllDetailsComponent implements OnInit,AfterViewInit {
   employees$: Observable<Employee[]>;
-
-  constructor(private _employeeService: EmployeeService, public dialog: MatDialog,private router:Router) { }
-
+  filteredEmployees$: Observable<Employee[]>;
+  arrayLength:number;
+  constructor(private _employeeService: EmployeeService, public dialog: MatDialog,private router:Router,
+    private _snackBar: MatSnackBar
+  ) { }
+  @ViewChild('searchInput') searchInput: ElementRef;
   ngOnInit(): void {    
-    this.employees$ =this._employeeService.getEmployeeListObservable();      
-  } 
-  openDialog(event: Event,id: number, firstName: string, lastName: string): void {
+    this.employees$ = this._employeeService.getEmployeeListObservable(); 
+    this.filteredEmployees$ = this.employees$; // Initialize filteredEmployees$ with all employees
+    this.filteredEmployees$.subscribe(filteredEmployees => {
+      this.arrayLength = filteredEmployees.length;
+    });
+  }
+
+  ngAfterViewInit(): void {
+    if (this.searchInput && this.searchInput.nativeElement) {
+      fromEvent(this.searchInput.nativeElement, 'input')
+        .pipe(
+          map((event: Event) => (event.target as HTMLInputElement).value),
+          debounceTime(300),
+          startWith('')
+        )
+        .subscribe(searchTerm => this.performSearch(searchTerm));
+    }
+  }
+  performSearch(searchTerm: string): void {
+    this.filteredEmployees$ = this.employees$.pipe(
+      map((employees: Employee[]) => {
+        if (!searchTerm.trim()) {
+          return employees; // Show full list when search term is empty
+        }  
+        const lowerCaseSearchTerm = searchTerm.toLowerCase().trim();
+        return employees.filter(emp =>
+          emp.firstName.toLowerCase().includes(lowerCaseSearchTerm) ||
+          emp.lastName.toLowerCase().includes(lowerCaseSearchTerm) ||
+          emp.identityNum.toString().toLowerCase().includes(lowerCaseSearchTerm) ||
+          emp.startDate.toString().toLowerCase().includes(lowerCaseSearchTerm) ||
+          emp.birthDate.toString().toLowerCase().includes(lowerCaseSearchTerm) ||
+          emp.jobs.some(job => job.job.name.toLowerCase().includes(lowerCaseSearchTerm))
+        );
+      })
+    );
+    this.filteredEmployees$.subscribe(filteredEmployees => {
+      this.arrayLength = filteredEmployees.length;
+    });
+  }
+
+  openDeleteDialog(event: Event,id: number, firstName: string, lastName: string): void {
     event.stopPropagation();
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: { id, firstName, lastName },
@@ -37,13 +80,18 @@ export class AllDetailsComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this._employeeService.deleteEmployee(id).subscribe();
+        this._snackBar.open("Deleted successfully!", "Ok", {
+          horizontalPosition:'left',
+          duration:3000
+        })
       }
     });
   }
   editEmployee(event: Event,employee:Employee) {
     event.stopPropagation();
-    this._employeeService.employeeToEdit=employee;
-    this.router.navigate(['/action/edit-employee'])
+    this._employeeService.employeeToEdit=employee; 
+    this.router.navigate(['/edit-employee'])
+    
   }
   
   downloadCSV() {
@@ -73,8 +121,9 @@ export class AllDetailsComponent implements OnInit {
       window.URL.revokeObjectURL(url);
     });
   }
+  
   toAdd()
   {
-    this.router.navigate(['/action/add-employee'])
+    this.router.navigate(['/add-employee'])
   }
 }
