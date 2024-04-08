@@ -18,18 +18,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EditEmloyeeComponent {
   public editEmployeeForm: FormGroup;
-  public employeeJobs: EmployeeJob[] = [];
   public jobs: Job[] = [];
   public selectedJobs: number[] = [];
   public employeeToEdit = this._employeeService.employeeToEdit;
-  
+  public errorMessage = "This field is required";
+
   constructor(private formBuilder: FormBuilder, private _employeeService: EmployeeService, private _employeeJobService: EmployeeJobService,
-    private fb: FormBuilder, private _jobsService: JobService, private router: Router,private _snackBar: MatSnackBar) {
+    private fb: FormBuilder, private _jobsService: JobService, private router: Router, private _snackBar: MatSnackBar) {
   }
   ngOnInit(): void {
-    //init the employee form data
     this.editEmployeeForm = this.fb.group({
-      firstName: [this.employeeToEdit.firstName, [Validators.required, Validators.minLength(2)]],
+      firstName: [this.employeeToEdit.firstName, Validators.required],
       lastName: [this.employeeToEdit.lastName, Validators.required],
       identityNum: [this.employeeToEdit.identityNum, [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('^[0-9]*$')]],
       startDate: [this.employeeToEdit.startDate, Validators.required],
@@ -47,10 +46,10 @@ export class EditEmloyeeComponent {
           entryDate: [new Date(job.entryDate), Validators.required],
           isManagement: [job.isManagement ? true : false, Validators.required]
         }));
-        this.selectedJobs.push(job.job.id);        
+        this.selectedJobs.push(job.job.id);
       });
     }
-    //get the jobs list
+    //get the jobs names list
     this._jobsService.getJobsList().subscribe({
       next: (res) => {
         this.jobs = res;
@@ -71,14 +70,12 @@ export class EditEmloyeeComponent {
       birthDate: employeeemployeeToEdit.birthDate,
       gender: parseInt(employeeemployeeToEdit.gender)
     }
-    // Send employee employeeToEdit to the server
+    // Send employee to the server
     this._employeeService.updateEmployee(this.employeeToEdit.id, newEmployee).subscribe((updatedEmployee: Employee) => {
-      console.log('Employee updated date:', updatedEmployee.startDate);
-      // Extract and send each job employeeToEdit to the server separately
+      // Extract and send each job to the server separately
       const empJobsFormArray = this.editEmployeeForm.get('empJobs') as FormArray;
       empJobsFormArray.controls.forEach(jobForm => {
         const jobToEdit = jobForm.value
-        console.log("updated job id:", jobToEdit.id);
         if (jobToEdit.id) {
           // Update existing job
           const updatedJob: PostEmployeeJobModel = {
@@ -87,23 +84,19 @@ export class EditEmloyeeComponent {
             entryDate: jobToEdit.entryDate,
             isManagement: jobToEdit.isManagement
           };
-          console.log("updated job :", updatedJob);
-          // Send updated job employeeToEdit to the server
+          // Send updated job to the server
           this._employeeJobService.updateJob(jobToEdit.id, updatedJob).subscribe((updatedJob: EmployeeJob) => {
-            console.log('Job updated:', updatedJob);
             this._employeeService.getEmployeesList().subscribe();
           });
         } else {
-          // Add new job
           const newJob: PostEmployeeJobModel = {
             jobId: jobToEdit.job,
             employeeId: updatedEmployee.id,
             entryDate: jobToEdit.entryDate,
             isManagement: jobToEdit.isManagement
           };
-          // Send new job employeeToEdit to the server
+          // Send new job to the server
           this._employeeJobService.addJob(newJob).subscribe((createdJob: EmployeeJob) => {
-            console.log('New job added:', createdJob);
             this._employeeService.getEmployeesList().subscribe();
           });
         }
@@ -111,8 +104,8 @@ export class EditEmloyeeComponent {
     });
     this.router.navigate(['/all-details']);
     this._snackBar.open("Updated successfully!", "Ok", {
-      horizontalPosition:'left',
-      duration:3000
+      horizontalPosition: 'left',
+      duration: 3000
     })
   }
 
@@ -120,20 +113,19 @@ export class EditEmloyeeComponent {
     const jobForm = this.fb.group({
       id: [undefined],
       job: [null, Validators.required],
-      entryDate: ['', Validators.required],
-      isManagement: [0, Validators.required]
+      entryDate: [null, Validators.required],
+      isManagement: [false, Validators.required]
     });
     const empJobs = this.editEmployeeForm.get('empJobs') as FormArray;
+    empJobs.push(jobForm);
     jobForm.get('job').valueChanges.subscribe((value) => {
       if (value) {
         this.selectedJobs = this.selectedJobs.filter(jobId => {
           return empJobs.controls.some(control => control.get('job').value === jobId);
         });
         this.selectedJobs.push(value);
-        console.log("selected jobs:",this.selectedJobs)
       }
-    });
-    empJobs.push(jobForm);
+    });    
   }
 
   removeJobForm(index: number): void {
@@ -142,13 +134,12 @@ export class EditEmloyeeComponent {
     // Check if the job is an existing job (already saved on the server)
     const isExistingJob = jobForm.get('id').value !== undefined;
     if (isExistingJob) {
-        // Remove the job ID from the selectedJobs array
-        const jobId = jobForm.get('job').value;
-        this.selectedJobs = this.selectedJobs.filter(id => id !== jobId);
-
-        // If it's an existing job, delete it from the server
-        const jobIdToDelete = jobForm.get('id').value;
-        this._employeeJobService.deleteJob(jobIdToDelete).subscribe();
+      // Remove the job ID from the selectedJobs array
+      const jobId = jobForm.get('job').value;
+      this.selectedJobs = this.selectedJobs.filter(id => id !== jobId);
+      // If it's an existing job, delete it from the server
+      const jobIdToDelete = jobForm.get('id').value;
+      this._employeeJobService.deleteJob(jobIdToDelete).subscribe();
     }
     // Remove the job form from the local form array and the UI
     empJobs.removeAt(index);
@@ -158,8 +149,8 @@ export class EditEmloyeeComponent {
     const startDate = new Date(this.editEmployeeForm.get('startDate').value);
     return !startDate || date >= startDate;
   };
-  
- 
+
+
 }
 
 

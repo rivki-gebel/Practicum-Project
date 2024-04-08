@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ManipulationRoutingModule } from '../manipulation.routing/manipulation.routing.module';
 import { EditEmloyeeComponent } from '../edit-emloyee/edit-emloyee.component';
 import { AddEmployeeComponent } from '../add-employee/add-employee.component';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -13,10 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
-import { ManipulationRoutingModule } from '../manipulation.routing/manipulation.routing.module';
-import {
- MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose,
-} from '@angular/material/dialog';
+import { MatDialogTitle,MatDialogContent,MatDialogActions,MatDialogClose} from '@angular/material/dialog';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [EditEmloyeeComponent,AddEmployeeComponent],

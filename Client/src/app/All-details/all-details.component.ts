@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
+import { Router } from '@angular/router';
 import { Employee } from '../Employee/employeeModel';
 import { EmployeeService } from '../Employee/employee.service';
-import { MatButtonModule } from '@angular/material/button';
-import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
-import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -26,8 +26,7 @@ export class AllDetailsComponent implements OnInit, AfterViewInit {
   filteredEmployees$: Observable<Employee[]>;
   arrayLength: number;
   constructor(private _employeeService: EmployeeService, public dialog: MatDialog, private router: Router,
-    private _snackBar: MatSnackBar
-  ) { }
+    private _snackBar: MatSnackBar){ }
 
   @ViewChild('searchInput') searchInput: ElementRef;
   
@@ -38,7 +37,6 @@ export class AllDetailsComponent implements OnInit, AfterViewInit {
       this.arrayLength = filteredEmployees.length;
     });
   }
-
   ngAfterViewInit(): void {
     if (this.searchInput && this.searchInput.nativeElement) {
       fromEvent(this.searchInput.nativeElement, 'input')
@@ -88,11 +86,11 @@ export class AllDetailsComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
   editEmployee(event: Event, employee: Employee) {
     event.stopPropagation();
     this._employeeService.employeeToEdit = employee;
     this.router.navigate(['/edit-employee'])
-
   }
 
   downloadCSV() {

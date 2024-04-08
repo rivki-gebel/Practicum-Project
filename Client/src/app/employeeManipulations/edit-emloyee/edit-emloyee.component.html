@@ -8,10 +8,13 @@
                     <mat-form-field>
                         <mat-label>First name</mat-label>
                         <input matInput placeholder="First name" formControlName="firstName">
+                        <mat-error>{{errorMessage}}</mat-error>
                     </mat-form-field>
+
                     <mat-form-field>
                         <mat-label>Last name</mat-label>
                         <input matInput placeholder="Last name" formControlName="lastName">
+                        <mat-error>{{errorMessage}}</mat-error>
                     </mat-form-field>
                 </div>
 
@@ -19,6 +22,20 @@
                     <mat-form-field>
                         <mat-label>Identity number</mat-label>
                         <input matInput placeholder="Identity number" formControlName="identityNum">
+                        @if(editEmployeeForm.controls['identityNum'].invalid){
+                            <mat-error>
+                                @if(editEmployeeForm.controls['identityNum'].errors['required']){
+                                    {{errorMessage}}
+                                }
+                                @if(editEmployeeForm.controls['identityNum'].errors['minlength'] ||
+                                editEmployeeForm.controls['identityNum'].errors['maxlength']){
+                                    Must be 9 characters
+                                }
+                                @if(editEmployeeForm.controls['identityNum'].errors['pattern']){
+                                    Must contain only digits
+                                }
+                            </mat-error>  
+                        }   
                     </mat-form-field>
 
                     <mat-form-field>
@@ -27,6 +44,7 @@
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matIconSuffix [for]="birthPicker"></mat-datepicker-toggle>
                         <mat-datepicker #birthPicker></mat-datepicker>
+                        <mat-error>Choose a date from the picker</mat-error>
                     </mat-form-field>
                 </div>
 
@@ -36,6 +54,7 @@
                     <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="jobStartDatePicker"></mat-datepicker-toggle>
                     <mat-datepicker #jobStartDatePicker></mat-datepicker>
+                    <mat-error>Choose a date from the picker</mat-error>
                 </mat-form-field><br>
 
                 <mat-button-toggle-group aria-label="Gender" formControlName="gender">
@@ -59,12 +78,13 @@
             <ng-container [formGroup]="form" class="addingJobs">
                 <mat-form-field class="jobField">
                     <mat-label>job</mat-label>
-                    <mat-select formControlName="job"  required>
+                    <mat-select formControlName="job" >
                         @for(job of jobs; track job){
                         <mat-option [value]="job.id"
                             [disabled]="selectedJobs.includes(job.id)">{{job.name}}</mat-option>
                         }
                     </mat-select>
+                    <mat-error>Select a job</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="jobField">
@@ -82,6 +102,7 @@
                     <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
                     <mat-datepicker #entryDatePicker></mat-datepicker>
+                    <mat-error>Choose a date from the picker</mat-error>
                 </mat-form-field>
 
                 <button (click)="removeJobForm($index)" mat-icon-button matTooltip="Remove Job">
@@ -107,9 +128,8 @@
             <div class="finish-buttons">
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>
-                <button (click)="submitForm()" type="submit" mat-raised-button color="primary">Save</button>
+                <button  (click)="editEmployeeForm.valid && submitForm()" type="submit" mat-raised-button color="primary">Save</button>
             </div>
-
         </mat-step>
     </mat-stepper>
 </div>

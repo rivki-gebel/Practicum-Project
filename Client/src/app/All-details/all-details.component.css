@@ -16,13 +16,13 @@
 }
 .searchbar {
   position:fixed;
-  width: 25%;
-  top: -12%;
+  width: 35%;
+  top: -12%;  
 }
 .search_input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border:none;
   border-radius: 20px;
   outline: none;
 }

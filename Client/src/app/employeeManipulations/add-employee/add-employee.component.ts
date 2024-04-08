@@ -18,21 +18,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class AddEmployeeComponent implements OnInit {
   public addEmployeeForm: FormGroup;
-  public employeeJobs: EmployeeJob[] = [];
   public jobs: Job[] = [];
   public selectedJobs: number[] = [];
+  public errorMessage = "This field is required";
 
   ngOnInit(): void {
     this.addEmployeeForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       identityNum: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('^[0-9]*$')]],
-      startDate: [new Date(), Validators.required],
+      startDate: [Validators.required],
       birthDate: [Validators.required],
-      gender: [0, Validators.required],
+      gender: [1, Validators.required],
       empJobs: this.fb.array([] as EmployeeJob[]),
     });
-    
+
     this._jobsService.getJobsList().subscribe({
       next: (res) => {
         this.jobs = res;
@@ -43,7 +43,7 @@ export class AddEmployeeComponent implements OnInit {
     })
   }
   constructor(private formBuilder: FormBuilder, private _employeeService: EmployeeService, private _employeeJobService: EmployeeJobService,
-    private fb: FormBuilder, private _jobsService: JobService, private router: Router,  private _snackBar: MatSnackBar) {
+    private fb: FormBuilder, private _jobsService: JobService, private router: Router, private _snackBar: MatSnackBar) {
   }
 
   submitForm() {
@@ -76,9 +76,10 @@ export class AddEmployeeComponent implements OnInit {
       });
     });
     this.router.navigate(['/all-details'])
+
     this._snackBar.open("successfully updated!", "Ok", {
-      horizontalPosition:'left',
-      duration:3000
+      horizontalPosition: 'left',
+      duration: 3000
     })
   }
 
@@ -89,6 +90,8 @@ export class AddEmployeeComponent implements OnInit {
       isManagement: [false, Validators.required]
     });
     const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
+    empJobs.push(jobForm);
+
     jobForm.get('job').valueChanges.subscribe((value) => {
       if (value) {
         this.selectedJobs = this.selectedJobs.filter(jobId => {
@@ -96,16 +99,15 @@ export class AddEmployeeComponent implements OnInit {
         });
         this.selectedJobs.push(value);
       }
-    });
-    empJobs.push(jobForm);
+    });   
   }
 
-removeJobForm(index: number): void {
-  const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
-  const removedJob = empJobs.at(index).get('job').value;
-  empJobs.removeAt(index);
-  this.selectedJobs = this.selectedJobs.filter(jobId => jobId !== removedJob);
- }
+  removeJobForm(index: number): void {
+    const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
+    const removedJob = empJobs.at(index).get('job').value;
+    empJobs.removeAt(index);
+    this.selectedJobs = this.selectedJobs.filter(jobId => jobId !== removedJob);
+  }
 
   filterStartDate = (date: Date): boolean => {
     const startDate = this.addEmployeeForm.get('startDate').value;

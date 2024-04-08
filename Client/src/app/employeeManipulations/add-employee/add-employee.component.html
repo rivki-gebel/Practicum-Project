@@ -1,112 +1,135 @@
 <div class="formContainer">
-<h2 id="header">Add new employee</h2><br>
-<mat-stepper [linear]="true" #stepper>
-    <mat-step [stepControl]="addEmployeeForm">
-        <form [formGroup]="addEmployeeForm">
-            <ng-template matStepLabel>Fill out employee details</ng-template>
-            <div class="names">
-                <mat-form-field>
-                    <mat-label>First name</mat-label>
-                    <input matInput placeholder="First name" formControlName="firstName">
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Last name</mat-label>
-                    <input matInput placeholder="Last name" formControlName="lastName">
-                </mat-form-field>
-            </div>
+    <h2 id="header">Add new employee</h2><br>
+    <mat-stepper [linear]="true" #stepper>
+        <mat-step [stepControl]="addEmployeeForm">
+            <form [formGroup]="addEmployeeForm">
+                <ng-template matStepLabel>Fill out employee details</ng-template>
+                <div class="names">
+                    <mat-form-field>
+                        <mat-label>First name</mat-label>
+                        <input matInput placeholder="First name" formControlName="firstName">
+                        <mat-error>{{errorMessage}}</mat-error>
+                    </mat-form-field>
 
-            <div class="privateDetails">
-                <mat-form-field>
-                    <mat-label>Identity number</mat-label>
-                    <input matInput placeholder="Identity number" formControlName="identityNum">
-                </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Last name</mat-label>
+                        <input matInput placeholder="Last name" formControlName="lastName">
+                        <mat-error>{{errorMessage}}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="privateDetails">
+                    <mat-form-field>
+                        <mat-label>Identity number</mat-label>
+                        <input matInput placeholder="Identity number" formControlName="identityNum">
+                        @if(addEmployeeForm.controls['identityNum'].invalid){
+                            <mat-error>
+                                @if(addEmployeeForm.controls['identityNum'].errors['required']){
+                                    {{errorMessage}}
+                                }
+                                @if(addEmployeeForm.controls['identityNum'].errors['minlength'] ||
+                                addEmployeeForm.controls['identityNum'].errors['maxlength']){
+                                    Must be 9 characters
+                                }
+                                @if(addEmployeeForm.controls['identityNum'].errors['pattern']){
+                                    Must contain only digits
+                                }
+                            </mat-error>  
+                        }                       
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Birth date</mat-label>
+                        <input matInput [matDatepicker]="birthPicker" formControlName="birthDate">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="birthPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #birthPicker></mat-datepicker>
+                        <mat-error>Choose a date from the picker</mat-error>
+                    </mat-form-field>
+                </div>
 
                 <mat-form-field>
-                    <mat-label>Birth date</mat-label>
-                    <input matInput [matDatepicker]="birthPicker" formControlName="birthDate">
+                    <mat-label>Job-Start date</mat-label>
+                    <input matInput [matDatepicker]="jobStartDatePicker" formControlName="startDate">
                     <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matIconSuffix [for]="birthPicker"></mat-datepicker-toggle>
-                    <mat-datepicker #birthPicker></mat-datepicker>
-                </mat-form-field>
-            </div>
-            
-            <mat-form-field>
-                <mat-label>Job-Start date</mat-label>
-                <input matInput [matDatepicker]="jobStartDatePicker" formControlName="startDate">
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="jobStartDatePicker"></mat-datepicker-toggle>
-                <mat-datepicker #jobStartDatePicker></mat-datepicker>
-            </mat-form-field><br>
-            
-            <mat-button-toggle-group aria-label="Gender" formControlName="gender">
-                <mat-button-toggle  value=1>Male</mat-button-toggle>
-                <mat-button-toggle  value=2>Female</mat-button-toggle>
-            </mat-button-toggle-group><br>
+                    <mat-datepicker-toggle matIconSuffix [for]="jobStartDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #jobStartDatePicker></mat-datepicker>
+                    <mat-error>Choose a date from the picker</mat-error>
+                </mat-form-field><br>
 
-            <div>
-                <button class="nextButton" mat-button matStepperNext>Next</button>
-            </div>
-        </form>
-    </mat-step>
+                <mat-button-toggle-group aria-label="Gender" formControlName="gender">
+                    <mat-button-toggle checked="true" value=1>Male</mat-button-toggle>
+                    <mat-button-toggle value=2>Female</mat-button-toggle>
+                </mat-button-toggle-group>
 
-    <mat-step>
-        <ng-template matStepLabel>Add jobs to employee</ng-template>
+                <div>
+                    <button class="nextButton" mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
 
-        @for (form of addEmployeeForm.get('empJobs')['controls']; track form) {
+        <mat-step>
+            <ng-template matStepLabel>Add jobs to employee</ng-template>
+            @for (form of addEmployeeForm.get('empJobs')['controls']; track form) {
             <div class="jobTitle">Job {{ $index + 1 }}</div><br>
-        <ng-container [formGroup]="form" class="addingJobs">
-            <mat-form-field class="jobField">
-                <mat-label>job</mat-label>
-                <mat-select formControlName="job" required>
-                    @for(job of jobs; track job){
-                    <mat-option [value]="job.id" [disabled]="selectedJobs.includes(job.id)">{{job.name}}</mat-option>
-                    }
-                </mat-select>
-            </mat-form-field>
+            <ng-container [formGroup]="form" class="addingJobs">
+                <mat-form-field class="jobField">
+                    <mat-label>job</mat-label>
+                    <mat-select formControlName="job" required>
+                        @for(job of jobs; track job){
+                        <mat-option [value]="job.id"
+                            [disabled]="selectedJobs.includes(job.id)">{{job.name}}</mat-option>
+                        }
+                    </mat-select>
+                    <mat-error>Select a job</mat-error>
+                </mat-form-field>
 
-            <mat-form-field class="jobField">
-                <mat-label>administrative</mat-label>
-                <mat-select formControlName="isManagement">
-                    <mat-option [value]="false">False</mat-option>
-                    <mat-option [value]="true">True</mat-option>
-                </mat-select>
-            </mat-form-field>
-           
-            <mat-form-field class="jobField">
-                <mat-label>Entry date</mat-label>
-                <input matInput [matDatepicker]="entryDatePicker"  formControlName="entryDate"
-                  [matDatepickerFilter]="filterStartDate">
-                  <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
-                <mat-datepicker #entryDatePicker></mat-datepicker>
-              </mat-form-field>
+                <mat-form-field class="jobField">
+                    <mat-label>administrative</mat-label>
+                    <mat-select formControlName="isManagement">
+                        <mat-option [value]="false">False</mat-option>
+                        <mat-option [value]="true">True</mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-            <button (click)="removeJobForm($index)" mat-icon-button matTooltip="Remove Job">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </ng-container>
-        }
-        <div>
-            <button class="addButton" (click)="addJobForm()" mat-fab extended color="primary">
-                <mat-icon>add</mat-icon>Add Job</button>            
-        </div>
+                <mat-form-field class="jobField">
+                    <mat-label>Entry date</mat-label>
+                    <input matInput [matDatepicker]="entryDatePicker" formControlName="entryDate"
+                        [matDatepickerFilter]="filterStartDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #entryDatePicker></mat-datepicker>
+                    <mat-error>Choose a date from the picker</mat-error>
+                </mat-form-field>
 
-        <div class="navigatesButtons">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-        </div>
+                <button (click)="removeJobForm($index)" mat-icon-button matTooltip="Remove Job">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </ng-container>
+            }
+            <div>
+                <button class="addButton" (click)="addJobForm()" mat-fab extended color="primary">
+                    <mat-icon>add</mat-icon>Add Job</button>
+            </div>
 
-    </mat-step>
+            <div class="navigatesButtons">
+                @if(addEmployeeForm.controls['empJobs'].valid){
+                    <button mat-button matStepperPrevious>Back</button>
+                }               
+                <button mat-button matStepperNext>Next</button>
+            </div>
 
-    <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p class="finish-text">You are now done.</p>
-        <div class="finish-buttons">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-            <button (click)="submitForm()" type="submit" mat-raised-button color="primary">Save</button>
-        </div>        
+        </mat-step>
 
-    </mat-step>
-</mat-stepper>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p class="finish-text">You are now done.</p>
+            <div class="finish-buttons">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+                <button (click)="addEmployeeForm.valid && submitForm()" type="submit" mat-raised-button color="primary">Save</button>
+            </div>
+
+        </mat-step>
+    </mat-stepper>
 </div>
