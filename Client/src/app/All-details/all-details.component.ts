@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { Employee } from '../Employee/employeeModel';
 import { EmployeeService } from '../Employee/employee.service';
 import { MatButtonModule } from '@angular/material/button';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
@@ -17,7 +16,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-all-details',
   standalone: true,
-  imports: [CommonModule, MatAccordion, MatExpansionModule, MatIconModule, MatButtonModule, MatPaginatorModule,
+  imports: [CommonModule, MatAccordion, MatExpansionModule, MatIconModule, MatButtonModule,
     MatTooltipModule, MatCardModule],
   templateUrl: './all-details.component.html',
   styleUrl: './all-details.component.css',

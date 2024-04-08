@@ -1,19 +1,23 @@
-<div class="navbar"> 
-  <button mat-icon-button >
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <button mat-icon-button >
-    <mat-icon>home</mat-icon>
-  </button>
-  <button mat-icon-button  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>favorite</mat-icon>
-  </button>
+<div class="side-navbar">
+  <div class="home-icons">
+    <button (click)="navigateToAllDetails()" matTooltip="Employees list" class="button-icon" mat-icon-button>
+      <mat-icon>group</mat-icon>
+    </button>
+    <button matTooltip="help" class="button-icon" mat-icon-button>
+      <mat-icon>help</mat-icon>
+    </button>
+    <button matTooltip="Settings" class="button-icon" mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button (click)="navigateToAddEmployee()" matTooltip="Add employee" class="button-icon" mat-icon-button>
+      <mat-icon>person_add</mat-icon>
+    </button>
+  </div>
 </div>
+
+<img class="logo" src="../../assets/logoWhite.png">
 <div class="background">
-    <div class="contextContainer">
+  <div class="contextContainer">
     @defer {
     <router-outlet></router-outlet>
     }
