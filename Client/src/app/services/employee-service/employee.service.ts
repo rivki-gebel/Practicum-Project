@@ -65,8 +65,7 @@ export class EmployeeService {
           const filteredList = currentList.filter(emp => emp.id !== id);
           this.employeeList$.next(filteredList);
         }),
-        catchError(error => this.handleError('Error in deleting employee', error))
-      );
+    );
   }
 
   private handleError(message: string, error: any): Observable<never> {

@@ -47,6 +47,8 @@ namespace Project.Data.Repositories
 
         public async Task<EmployeeJob> UpdateAsync(int id, EmployeeJob employeeJob)
         {
+            if (!IsValidEntryDate(employeeJob.EntryDate, employeeJob.EmployeeId))
+                throw new Exception("Entry date must be later than start date");
             var existEmployeeJob=await GetByIdAsync(id);
             existEmployeeJob.EntryDate=employeeJob.EntryDate;
             existEmployeeJob.JobId= employeeJob.JobId;

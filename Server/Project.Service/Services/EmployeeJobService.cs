@@ -43,6 +43,8 @@ namespace Project.Service.Services
 
         public async Task<EmployeeJob> UpdateAsync(int id, EmployeeJob employeeJob)
         {
+            if (IsDuplicateJobNameForEmployee(employeeJob.EmployeeId, employeeJob.JobId))
+                throw new Exception("Employee has already the same job");
             return await _employeeJobRepository.UpdateAsync(id,employeeJob);
         }
         private bool IsDuplicateJobNameForEmployee(int employeeId, int jobId)

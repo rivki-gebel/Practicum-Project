@@ -43,6 +43,8 @@ namespace Project.Service.Services
 
         public async Task<Employee> UpdateAsync(int id, Employee employee)
         {
+            if (!IsValidEmployeeId(employee.IdentityNum))
+                throw new Exception("Invalid employee data.");
             return await _employeeRepository.UpdateAsync(id, employee);
         }
 

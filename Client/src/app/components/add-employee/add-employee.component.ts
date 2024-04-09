@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { EmployeeService } from '../../services/employee-service/employee.service';
 import { Job } from '../../models/JobModel';
 import { Employee } from '../../models/employeeModel';
@@ -87,7 +87,7 @@ export class AddEmployeeComponent implements OnInit {
   addJobForm(): void {
     const jobForm = this.fb.group({
       job: [null, Validators.required],
-      entryDate: ['', Validators.required],
+      entryDate: ['', [Validators.required,this.entryDateValidator()]],
       isManagement: [false, Validators.required]
     });
     const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
@@ -114,5 +114,24 @@ export class AddEmployeeComponent implements OnInit {
     const startDate = this.addEmployeeForm.get('startDate').value;
     return !startDate || date >= startDate;
   };
+
+  entryDateValidator(): ValidatorFn {
+    console.log("in validation")
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const entryDateValue = control.value;
+      const startDateValue = this.addEmployeeForm.get('startDate').value;
+
+      if (entryDateValue && startDateValue) {
+        const entryDate = new Date(entryDateValue);
+        const startDate = new Date(startDateValue);
+
+        if (entryDate < startDate) {
+          console.log("valid date")
+          return { 'invalidEntryDate': true };
+        }
+      }
+      return null;
+    };
+  }
 }
 
