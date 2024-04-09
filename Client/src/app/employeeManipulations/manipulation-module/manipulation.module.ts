@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ManipulationRoutingModule } from '../manipulation.routing/manipulation.routing.module';
-import { EditEmloyeeComponent } from '../edit-emloyee/edit-emloyee.component';
-import { AddEmployeeComponent } from '../add-employee/add-employee.component';
+import { EditEmloyeeComponent } from '../../components/edit-emloyee/edit-emloyee.component';
+import { AddEmployeeComponent } from '../../components/add-employee/add-employee.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';

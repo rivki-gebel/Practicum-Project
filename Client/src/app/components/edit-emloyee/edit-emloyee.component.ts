@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { EmployeeService } from '../../employee/employee.service';
-import { Employee } from '../../employee/employeeModel';
-import { PostEmployee } from '../../employee/postEmployeeModel';
-import { EmployeeJobService } from '../../employeeJob/employee-job.service';
-import { EmployeeJob } from '../../employeeJob/employeeJobModel';
-import { PostEmployeeJobModel } from '../../employeeJob/postEmployeeJobModel';
-import { Job } from '../../Job/JobModel';
-import { JobService } from '../../Job/job.service';
+import { EmployeeService } from '../../services/employee-service/employee.service';
+import { Employee } from '../../models/employeeModel';
+import { PostEmployee } from '../../models/postEmployeeModel';
+import { EmployeeJobService } from '../../services/employeeJob-service/employee-job.service';
+import { EmployeeJob } from '../../models/employeeJobModel';
+import { PostEmployeeJobModel } from '../../models/postEmployeeJobModel';
+import { Job } from '../../models/JobModel';
+import { JobService } from '../../services/job-service/job.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSelectChange } from '@angular/material/select';
 

@@ -1,4 +1,4 @@
-import { Job } from "../Job/JobModel"
+import { Job } from "./JobModel"
 
 export class EmployeeJob {
     id:number

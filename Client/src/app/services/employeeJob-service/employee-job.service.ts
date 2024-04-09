@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { EmployeeJob } from './employeeJobModel';
-import { PostEmployeeJobModel } from './postEmployeeJobModel';
+import { EmployeeJob } from '../../models/employeeJobModel';
+import { PostEmployeeJobModel } from '../../models/postEmployeeJobModel';
 
 
 

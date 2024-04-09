@@ -1,4 +1,4 @@
-import { Job } from "../Job/JobModel"
+import { Job } from "./JobModel"
 
 export class PostEmployeeJobModel {
     jobId:number

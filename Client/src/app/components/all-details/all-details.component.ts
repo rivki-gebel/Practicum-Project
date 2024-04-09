@@ -2,8 +2,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { CommonModule } from '@angular/common';
 import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
 import { Router } from '@angular/router';
-import { Employee } from '../employee/employeeModel';
-import { EmployeeService } from '../employee/employee.service';
+import { Employee } from '../../models/employeeModel';
+import { EmployeeService } from '../../services/employee-service/employee.service';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,6 +12,7 @@ import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-all-details',

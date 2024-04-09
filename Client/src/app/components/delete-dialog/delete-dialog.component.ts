@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EmployeeService } from '../../services/employee-service/employee.service';
 import { MatButtonModule } from '@angular/material/button';
 import {
   MAT_DIALOG_DATA,
@@ -10,8 +12,7 @@ import {
   MatDialogClose,
 } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { EmployeeService } from '../employee/employee.service';
-import { Router } from '@angular/router';
+
 
 export interface DialogData {
   id: number;

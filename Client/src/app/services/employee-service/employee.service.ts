@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, catchError, map, throwError } from 'rxjs';
-import { Employee } from './employeeModel';
-import { PostEmployee } from './postEmployeeModel';
+import { Employee } from '../../models/employeeModel';
+import { PostEmployee } from '../../models/postEmployeeModel';
 
 
 @Injectable({

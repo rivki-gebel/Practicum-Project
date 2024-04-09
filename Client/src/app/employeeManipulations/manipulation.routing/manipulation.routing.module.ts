@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
-import { EditEmloyeeComponent } from '../edit-emloyee/edit-emloyee.component';
-import { AddEmployeeComponent } from '../add-employee/add-employee.component';
-import { NotFoundComponent } from '../../not-found/not-found.component';
+import { EditEmloyeeComponent } from '../../components/edit-emloyee/edit-emloyee.component';
+import { AddEmployeeComponent } from '../../components/add-employee/add-employee.component';
+import { NotFoundComponent } from '../../components/not-found/not-found.component';
 
 const manipulationRoutes: Routes = [
   { path: 'edit-employee', component: EditEmloyeeComponent },
