@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../../services/employee-service/employee.service';
 import { Employee } from '../../models/employeeModel';
@@ -108,14 +108,14 @@ export class EditEmloyeeComponent {
         duration: 3000
       })
     });
-   
+
   }
 
   addJobForm(): void {
     const jobForm = this.fb.group({
       id: [undefined],
       job: [null, Validators.required],
-      entryDate: ['', Validators.required],
+      entryDate: ['', [Validators.required, this.entryDateValidator()]],
       isManagement: [false, Validators.required]
     });
     const empJobs = this.editEmployeeForm.get('empJobs') as FormArray;
@@ -127,7 +127,7 @@ export class EditEmloyeeComponent {
         });
         this.selectedJobs.push(value);
       }
-    });    
+    });
   }
 
   removeJobForm(index: number): void {
@@ -152,15 +152,24 @@ export class EditEmloyeeComponent {
     return !startDate || date >= startDate;
   };
   onSelectionChange(event: MatSelectChange, index: number) {
-    this.selectedJobs[index]=event.value;    
+    this.selectedJobs[index] = event.value;
   };
-  getBackButtonStyle() {
-    if (!this.editEmployeeForm.valid) {
-      return { 'background-color': 'red', 'color': 'white' };
-    }
-    return {};
+  entryDateValidator(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const entryDateValue = control.value;
+      const startDateValue = this.editEmployeeForm.get('startDate').value;
+
+      if (entryDateValue && startDateValue) {
+        const entryDate = new Date(entryDateValue);
+        const startDate = new Date(startDateValue);
+
+        if (entryDate < startDate) {
+          return { 'invalidEntryDate': true };
+        }
+      }
+      return null;
+    };
   }
- 
 }
 
 

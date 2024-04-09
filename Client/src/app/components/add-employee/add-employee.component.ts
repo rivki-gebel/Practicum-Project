@@ -81,13 +81,13 @@ export class AddEmployeeComponent implements OnInit {
     });
     this.router.navigate(['/all-details'])
 
-   
+
   }
 
   addJobForm(): void {
     const jobForm = this.fb.group({
       job: [null, Validators.required],
-      entryDate: ['', [Validators.required,this.entryDateValidator()]],
+      entryDate: ['', [Validators.required, this.entryDateValidator()]],
       isManagement: [false, Validators.required]
     });
     const empJobs = this.addEmployeeForm.get('empJobs') as FormArray;
@@ -100,7 +100,7 @@ export class AddEmployeeComponent implements OnInit {
         });
         this.selectedJobs.push(value);
       }
-    });   
+    });
   }
 
   removeJobForm(index: number): void {
@@ -116,7 +116,6 @@ export class AddEmployeeComponent implements OnInit {
   };
 
   entryDateValidator(): ValidatorFn {
-    console.log("in validation")
     return (control: AbstractControl): { [key: string]: any } | null => {
       const entryDateValue = control.value;
       const startDateValue = this.addEmployeeForm.get('startDate').value;
@@ -126,7 +125,6 @@ export class AddEmployeeComponent implements OnInit {
         const startDate = new Date(startDateValue);
 
         if (entryDate < startDate) {
-          console.log("valid date")
           return { 'invalidEntryDate': true };
         }
       }
