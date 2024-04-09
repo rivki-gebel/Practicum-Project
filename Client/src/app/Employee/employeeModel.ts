@@ -1,4 +1,4 @@
-import { EmployeeJob } from "../EmployeeJob/employeeJobModel"
+import { EmployeeJob } from "../employeeJob/employeeJobModel"
 
 
 export class Employee {

@@ -5,6 +5,7 @@ import { EmployeeJob } from './employeeJobModel';
 import { PostEmployeeJobModel } from './postEmployeeJobModel';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,8 +23,7 @@ export class EmployeeJobService {
   }
  
   addJob(employeeJob: PostEmployeeJobModel) {
-    return this._http.post('https://localhost:7159/api/EmployeeJobs', employeeJob)
- 
+    return this._http.post('https://localhost:7159/api/EmployeeJobs', employeeJob) 
   }
 
   updateJob(id:number, employeeJob: PostEmployeeJobModel)

@@ -21,6 +21,8 @@ namespace Project.Service.Services
 
         public async Task<EmployeeJob> AddAsync(EmployeeJob employeeJob)
         {
+            if (IsDuplicateJobNameForEmployee(employeeJob.EmployeeId, employeeJob.JobId))
+                throw new Exception("Employee has already the same job");
            return await _employeeJobRepository.AddAsync(employeeJob);
         }
 
@@ -34,14 +36,20 @@ namespace Project.Service.Services
             return await _employeeJobRepository.GetByIdAsync(id);
         }
 
-        public async Task<List<EmployeeJob>> GetListAsynk()
+        public async Task<List<EmployeeJob>> GetListAsync()
         {
-            return await _employeeJobRepository.GetListAsynk();
+            return await _employeeJobRepository.GetListAsync();
         }
 
         public async Task<EmployeeJob> UpdateAsync(int id, EmployeeJob employeeJob)
         {
             return await _employeeJobRepository.UpdateAsync(id,employeeJob);
         }
+        private bool IsDuplicateJobNameForEmployee(int employeeId, int jobId)
+        {
+            var existingJob = _employeeJobRepository.GetListAsync().Result.FirstOrDefault(e => e.EmployeeId == employeeId && e.JobId == jobId);
+            return existingJob != null;
+        }
+
     }
 }

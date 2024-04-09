@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeService } from '../../Employee/employee.service';
+import { EmployeeService } from '../../employee/employee.service';
 import { Job } from '../../Job/JobModel';
-import { Employee } from '../../Employee/employeeModel';
-import { EmployeeJobService } from '../../EmployeeJob/employee-job.service';
-import { EmployeeJob } from '../../EmployeeJob/employeeJobModel';
-import { PostEmployee } from '../../Employee/postEmployeeModel';
-import { PostEmployeeJobModel } from '../../EmployeeJob/postEmployeeJobModel';
+import { Employee } from '../../employee/employeeModel';
+import { EmployeeJobService } from '../../employeeJob/employee-job.service';
+import { EmployeeJob } from '../../employeeJob/employeeJobModel';
+import { PostEmployee } from '../../employee/postEmployeeModel';
+import { PostEmployeeJobModel } from '../../employeeJob/postEmployeeJobModel';
 import { JobService } from '../../Job/job.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -74,13 +74,14 @@ export class AddEmployeeComponent implements OnInit {
           this._employeeService.getEmployeesList().subscribe();
         });
       });
+      this._snackBar.open("successfully updated!", "Ok", {
+        horizontalPosition: 'left',
+        duration: 3000
+      })
     });
     this.router.navigate(['/all-details'])
 
-    this._snackBar.open("successfully updated!", "Ok", {
-      horizontalPosition: 'left',
-      duration: 3000
-    })
+   
   }
 
   addJobForm(): void {

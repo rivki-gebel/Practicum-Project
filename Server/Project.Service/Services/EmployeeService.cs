@@ -19,6 +19,10 @@ namespace Project.Service.Services
         }
         public async Task<Employee> AddAsync(Employee employee)
         {
+            if (!IsValidEmployeeId(employee.IdentityNum))
+                throw new Exception("Invalid employee data.");
+            if (IsDuplicateEmployeeId(employee.IdentityNum))
+                throw new Exception("Employee width the same identity number already exists");
             return await _employeeRepository.AddAsync(employee);
         }
 
@@ -34,17 +38,28 @@ namespace Project.Service.Services
 
         public async Task<List<Employee>> GetListAsync()
         {
-           return await _employeeRepository.GetListAsync();
+            return await _employeeRepository.GetListAsync();
         }
 
         public async Task<Employee> UpdateAsync(int id, Employee employee)
         {
-            return await _employeeRepository.UpdateAsync(id, employee); 
+            return await _employeeRepository.UpdateAsync(id, employee);
         }
 
         public async Task VirtualDeleteAsync(int id)
         {
             await _employeeRepository.VirtualDeleteAsync(id);
         }
+
+        private bool IsValidEmployeeId(string identityNum)
+        {
+            return !string.IsNullOrEmpty(identityNum) && identityNum.Length == 9 && int.TryParse(identityNum, out _);
+        }
+        private bool IsDuplicateEmployeeId(string identityNum)
+        {
+            var existingEmployee =  _employeeRepository.GetListAsync().Result.FirstOrDefault(e => e.IdentityNum == identityNum);
+            return existingEmployee != null && existingEmployee.ActivityStatus==true;
+        }
     }
+       
 }

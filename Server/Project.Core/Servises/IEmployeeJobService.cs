@@ -9,7 +9,7 @@ namespace Project.Core.Servises
 {
     public interface IEmployeeJobService
     {
-        Task<List<EmployeeJob>> GetListAsynk();
+        Task<List<EmployeeJob>> GetListAsync();
         Task<EmployeeJob> GetByIdAsync(int id);
         Task<EmployeeJob> AddAsync(EmployeeJob employeeJob);
 

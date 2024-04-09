@@ -19,6 +19,8 @@ namespace Project.Data.Repositories
         }
         public async Task<EmployeeJob> AddAsync(EmployeeJob employeeJob)
         {
+            if (!IsValidEntryDate(employeeJob.EntryDate, employeeJob.EmployeeId))
+                throw new Exception("Entry date must be later than start date");
             _context.EmployeeJobs.Add(employeeJob);
             await _context.SaveChangesAsync();
             return employeeJob;
@@ -37,7 +39,7 @@ namespace Project.Data.Repositories
             return x;
         }
 
-        public async Task<List<EmployeeJob>> GetListAsynk()
+        public async Task<List<EmployeeJob>> GetListAsync()
         {
             return await _context.EmployeeJobs.Include(ej=>ej.Job).Include(ej => ej.Employee).ToListAsync();
             
@@ -49,9 +51,14 @@ namespace Project.Data.Repositories
             existEmployeeJob.EntryDate=employeeJob.EntryDate;
             existEmployeeJob.JobId= employeeJob.JobId;
             existEmployeeJob.EmployeeId=employeeJob.EmployeeId;
-            //_context.Entry(existEmployeeJob).CurrentValues.SetValues(employeeJob);
+       
             await _context.SaveChangesAsync();
             return existEmployeeJob;    
+        }
+        private bool IsValidEntryDate(DateTime entryDate,int employeeId)
+        {
+            DateTime employeeSTartDate = _context.Employees.First(e => e.Id == employeeId).StartDate;
+            return entryDate>employeeSTartDate;
         }
     }
 }

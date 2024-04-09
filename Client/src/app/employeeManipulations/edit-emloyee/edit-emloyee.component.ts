@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeService } from '../../Employee/employee.service';
-import { Employee } from '../../Employee/employeeModel';
-import { PostEmployee } from '../../Employee/postEmployeeModel';
-import { EmployeeJobService } from '../../EmployeeJob/employee-job.service';
-import { EmployeeJob } from '../../EmployeeJob/employeeJobModel';
-import { PostEmployeeJobModel } from '../../EmployeeJob/postEmployeeJobModel';
+import { Router } from '@angular/router';
+import { EmployeeService } from '../../employee/employee.service';
+import { Employee } from '../../employee/employeeModel';
+import { PostEmployee } from '../../employee/postEmployeeModel';
+import { EmployeeJobService } from '../../employeeJob/employee-job.service';
+import { EmployeeJob } from '../../employeeJob/employeeJobModel';
+import { PostEmployeeJobModel } from '../../employeeJob/postEmployeeJobModel';
 import { Job } from '../../Job/JobModel';
 import { JobService } from '../../Job/job.service';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-edit-emloyee',
@@ -101,19 +102,20 @@ export class EditEmloyeeComponent {
           });
         }
       });
+      this.router.navigate(['/all-details']);
+      this._snackBar.open("Updated successfully!", "Ok", {
+        horizontalPosition: 'left',
+        duration: 3000
+      })
     });
-    this.router.navigate(['/all-details']);
-    this._snackBar.open("Updated successfully!", "Ok", {
-      horizontalPosition: 'left',
-      duration: 3000
-    })
+   
   }
 
   addJobForm(): void {
     const jobForm = this.fb.group({
       id: [undefined],
       job: [null, Validators.required],
-      entryDate: [null, Validators.required],
+      entryDate: ['', Validators.required],
       isManagement: [false, Validators.required]
     });
     const empJobs = this.editEmployeeForm.get('empJobs') as FormArray;
@@ -149,8 +151,16 @@ export class EditEmloyeeComponent {
     const startDate = new Date(this.editEmployeeForm.get('startDate').value);
     return !startDate || date >= startDate;
   };
-
-
+  onSelectionChange(event: MatSelectChange, index: number) {
+    this.selectedJobs[index]=event.value;    
+  };
+  getBackButtonStyle() {
+    if (!this.editEmployeeForm.valid) {
+      return { 'background-color': 'red', 'color': 'white' };
+    }
+    return {};
+  }
+ 
 }
 
 

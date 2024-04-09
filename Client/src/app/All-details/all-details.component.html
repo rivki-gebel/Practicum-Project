@@ -59,7 +59,7 @@
                             <p>{{emp.identityNum}}</p>
                         </mat-panel-description>
                         <mat-panel-description>
-                            <p>{{emp.birthDate | date: 'dd MMMM yyyy'}}</p>
+                            <p>{{emp.startDate| date: 'dd MMMM yyyy'}}</p>
                         </mat-panel-description>
                         <button mat-icon-button (click)="openDeleteDialog($event,emp.id,emp.firstName,emp.lastName)">
                             <mat-icon class="icon">delete</mat-icon>

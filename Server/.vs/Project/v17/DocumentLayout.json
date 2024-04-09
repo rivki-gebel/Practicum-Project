@@ -1,135 +1,132 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\",
+  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/workersSystem_DB/True/SqlTable/dbo.Employees.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\controllers\\employeejobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.data\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.data\\repositories\\employeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\repositories\\employeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.service\\services\\employeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\services\\employeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\entities\\employeejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\entities\\employeejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\controllers\\employeejobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\controllers\\employeejobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.data\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\repositories\\iemployeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\repositories\\iemployeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\servises\\iemployeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\servises\\iemployeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/workersSystem_DB/True/SqlTable/dbo.EmployeeJobs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.data\\repositories\\employeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\repositories\\employeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.service\\services\\employeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\services\\employeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\servises\\iemployeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\servises\\iemployeejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.data\\repositories\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.data\\repositories\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\repositories\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\models\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\models\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\models\\employeepostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\models\\employeejobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\models\\employeejobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\models\\employeejobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\dtos\\employeejobdtoforemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\dtos\\employeejobdtoforemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\dtos\\employeejobdtoforemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\dtos\\employeejobdtoown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\dtos\\employeejobdtoown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\dtos\\employeejobdtoown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\dtos\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\dtos\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\dtos\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\models\\jobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\models\\jobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\models\\jobpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\entities\\employeejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\entities\\employeejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\entities\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\entities\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\entities\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\mapping\\postmodelmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\mapping\\postmodelmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\mapping\\postmodelmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\servises\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\servises\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\servises\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\repositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\repositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\repositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\repositories\\ijobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\repositories\\ijobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\repositories\\ijobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14C463E8-282F-44FA-A66C-088BDD965DEC}|Project\\Project.csproj|solutionrelative:project\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\repositories\\iemployeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\repositories\\iemployeejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.data\\project.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.data\\project.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{024360CF-E025-417E-932F-DB0ADA1E1BC1}|Project.Data\\Project.Data.csproj|solutionrelative:project.data\\project.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.service\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.service\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.core\\servises\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.core\\servises\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B3E1CE5-D0C0-43A4-8062-F394E385B201}|Project.Core\\Project.Core.csproj|solutionrelative:project.core\\servises\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\server\\project.service\\project.service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|c:\\users\\user1\\desktop\\practicum-project\\server\\project.service\\project.service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A621AC0C-20B4-4F9B-8FE7-F8DD6AAE0299}|Project.Service\\Project.Service.csproj|solutionrelative:project.service\\project.service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -140,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -156,78 +153,140 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.Employees [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/workersSystem_DB/True/SqlTable/dbo.Employees.sql",
-              "ToolTip": "dbo.Employees [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-04T12:33:52.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IEmployeeJobService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IEmployeeJobService.cs",
-              "RelativeDocumentMoniker": "Project.Core\\Servises\\IEmployeeJobService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IEmployeeJobService.cs",
-              "RelativeToolTip": "Project.Core\\Servises\\IEmployeeJobService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAmAAAA",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "Project.Core\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\Employee.cs",
+              "RelativeToolTip": "Project.Core\\Entities\\Employee.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T23:43:00.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeJobService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\EmployeeJobService.cs",
-              "RelativeDocumentMoniker": "Project.Service\\Services\\EmployeeJobService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\EmployeeJobService.cs",
-              "RelativeToolTip": "Project.Service\\Services\\EmployeeJobService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAnwCEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T23:46:34.941Z"
+              "WhenOpened": "2024-03-28T17:51:39.785Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "EmployeeJobRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\EmployeeJobRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\EmployeeJobRepository.cs",
               "RelativeDocumentMoniker": "Project.Data\\Repositories\\EmployeeJobRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\EmployeeJobRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\EmployeeJobRepository.cs",
               "RelativeToolTip": "Project.Data\\Repositories\\EmployeeJobRepository.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAQwCMAAAALAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBYAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T23:44:34.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "Project.Data\\Repositories\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\EmployeeRepository.cs",
               "RelativeToolTip": "Project.Data\\Repositories\\EmployeeRepository.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwDEAAAAMAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAWwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T21:39:58.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeJobsController.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\EmployeeJobsController.cs",
-              "RelativeDocumentMoniker": "Project\\Controllers\\EmployeeJobsController.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\EmployeeJobsController.cs",
-              "RelativeToolTip": "Project\\Controllers\\EmployeeJobsController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAewDwAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Project.Service\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Project.Service\\Services\\EmployeeService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAWwBQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T13:45:43.158Z",
+              "WhenOpened": "2024-03-19T21:46:10.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Project.Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\DataContext.cs",
+              "RelativeToolTip": "Project.Data\\DataContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAnwBMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:38:08.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Project\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAewDAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T21:51:27.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeJob.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\EmployeeJob.cs",
+              "RelativeDocumentMoniker": "Project.Core\\Entities\\EmployeeJob.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\EmployeeJob.cs",
+              "RelativeToolTip": "Project.Core\\Entities\\EmployeeJob.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T17:53:36.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeeJobService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\EmployeeJobService.cs",
+              "RelativeDocumentMoniker": "Project.Service\\Services\\EmployeeJobService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\EmployeeJobService.cs",
+              "RelativeToolTip": "Project.Service\\Services\\EmployeeJobService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T23:46:34.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeJobsController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\EmployeeJobsController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\EmployeeJobsController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\EmployeeJobsController.cs",
+              "RelativeToolTip": "Project\\Controllers\\EmployeeJobsController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAAACIAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T13:45:43.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEmployeeJobRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IEmployeeJobRepository.cs",
+              "RelativeDocumentMoniker": "Project.Core\\Repositories\\IEmployeeJobRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IEmployeeJobRepository.cs",
+              "RelativeToolTip": "Project.Core\\Repositories\\IEmployeeJobRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T23:31:34.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IEmployeeJobService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IEmployeeJobService.cs",
+              "RelativeDocumentMoniker": "Project.Core\\Servises\\IEmployeeJobService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IEmployeeJobService.cs",
+              "RelativeToolTip": "Project.Core\\Servises\\IEmployeeJobService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T23:43:00.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "dbo.EmployeeJobs [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/workersSystem_DB/True/SqlTable/dbo.EmployeeJobs.sql",
               "ToolTip": "dbo.EmployeeJobs [Data]",
@@ -236,11 +295,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "EmployeePostModel.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\EmployeePostModel.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\EmployeePostModel.cs",
               "RelativeDocumentMoniker": "Project\\Models\\EmployeePostModel.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\EmployeePostModel.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\EmployeePostModel.cs",
               "RelativeToolTip": "Project\\Models\\EmployeePostModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -248,11 +307,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "JobRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\JobRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\JobRepository.cs",
               "RelativeDocumentMoniker": "Project.Data\\Repositories\\JobRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Repositories\\JobRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Repositories\\JobRepository.cs",
               "RelativeToolTip": "Project.Data\\Repositories\\JobRepository.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAlwC0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -260,35 +319,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Project.Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\DataContext.cs",
-              "RelativeToolTip": "Project.Data\\DataContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAnwBUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:38:08.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\Employee.cs",
-              "RelativeDocumentMoniker": "Project.Core\\Entities\\Employee.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\Employee.cs",
-              "RelativeToolTip": "Project.Core\\Entities\\Employee.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA0wA4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T17:51:39.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "EmployeeJobPostModel.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\EmployeeJobPostModel.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\EmployeeJobPostModel.cs",
               "RelativeDocumentMoniker": "Project\\Models\\EmployeeJobPostModel.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\EmployeeJobPostModel.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\EmployeeJobPostModel.cs",
               "RelativeToolTip": "Project\\Models\\EmployeeJobPostModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -296,11 +331,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "EmployeeJobDTOown.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeJobDTOown.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeJobDTOown.cs",
               "RelativeDocumentMoniker": "Project.Core\\DTOs\\EmployeeJobDTOown.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeJobDTOown.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeJobDTOown.cs",
               "RelativeToolTip": "Project.Core\\DTOs\\EmployeeJobDTOown.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAiwAsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -308,11 +343,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "EmployeeJobDTOforEmp.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
               "RelativeDocumentMoniker": "Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
               "RelativeToolTip": "Project.Core\\DTOs\\EmployeeJobDTOforEmp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -320,11 +355,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Program.cs",
               "RelativeDocumentMoniker": "Project\\Program.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Program.cs",
               "RelativeToolTip": "Project\\Program.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAYwDMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -332,11 +367,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EmployeeDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeDTO.cs",
               "RelativeDocumentMoniker": "Project.Core\\DTOs\\EmployeeDTO.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\EmployeeDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\EmployeeDTO.cs",
               "RelativeToolTip": "Project.Core\\DTOs\\EmployeeDTO.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAqwA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -344,11 +379,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "JobDTO.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\JobDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\JobDTO.cs",
               "RelativeDocumentMoniker": "Project.Core\\DTOs\\JobDTO.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\DTOs\\JobDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\DTOs\\JobDTO.cs",
               "RelativeToolTip": "Project.Core\\DTOs\\JobDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -356,11 +391,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "JobPostModel.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\JobPostModel.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\JobPostModel.cs",
               "RelativeDocumentMoniker": "Project\\Models\\JobPostModel.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Models\\JobPostModel.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Models\\JobPostModel.cs",
               "RelativeToolTip": "Project\\Models\\JobPostModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -368,23 +403,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmployeeJob.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\EmployeeJob.cs",
-              "RelativeDocumentMoniker": "Project.Core\\Entities\\EmployeeJob.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\EmployeeJob.cs",
-              "RelativeToolTip": "Project.Core\\Entities\\EmployeeJob.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T17:53:36.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "PostModelMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Mapping\\PostModelMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Mapping\\PostModelMappingProfile.cs",
               "RelativeDocumentMoniker": "Project\\Mapping\\PostModelMappingProfile.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Mapping\\PostModelMappingProfile.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Mapping\\PostModelMappingProfile.cs",
               "RelativeToolTip": "Project\\Mapping\\PostModelMappingProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -392,11 +415,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Job.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\Job.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\Job.cs",
               "RelativeDocumentMoniker": "Project.Core\\Entities\\Job.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Entities\\Job.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Entities\\Job.cs",
               "RelativeToolTip": "Project.Core\\Entities\\Job.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -404,11 +427,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Mapping\\MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Project.Core\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Mapping\\MappingProfile.cs",
               "RelativeToolTip": "Project.Core\\Mapping\\MappingProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -416,36 +439,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Project.Service\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Project.Service\\Services\\EmployeeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:46:10.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "Project\\Controllers\\EmployeesController.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "Project\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAowBsAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T21:51:27.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 24,
               "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IEmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "Project.Core\\Servises\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IEmployeeService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IEmployeeService.cs",
               "RelativeToolTip": "Project.Core\\Servises\\IEmployeeService.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAcwAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -455,9 +453,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "IEmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IEmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "Project.Core\\Repositories\\IEmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IEmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IEmployeeRepository.cs",
               "RelativeToolTip": "Project.Core\\Repositories\\IEmployeeRepository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAADgvwsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -467,22 +465,21 @@
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "JobsController.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\JobsController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\JobsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\JobsController.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project\\Controllers\\JobsController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project\\Controllers\\JobsController.cs",
               "RelativeToolTip": "Project\\Controllers\\JobsController.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAAYwE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T23:57:34.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T23:57:34.787Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "IJobRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IJobRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IJobRepository.cs",
               "RelativeDocumentMoniker": "Project.Core\\Repositories\\IJobRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IJobRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Repositories\\IJobRepository.cs",
               "RelativeToolTip": "Project.Core\\Repositories\\IJobRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAhwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -491,22 +488,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "IEmployeeJobRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IEmployeeJobRepository.cs",
-              "RelativeDocumentMoniker": "Project.Core\\Repositories\\IEmployeeJobRepository.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Repositories\\IEmployeeJobRepository.cs",
-              "RelativeToolTip": "Project.Core\\Repositories\\IEmployeeJobRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T23:31:34.114Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
               "Title": "Project.Data.csproj",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Project.Data.csproj",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Project.Data.csproj",
               "RelativeDocumentMoniker": "Project.Data\\Project.Data.csproj",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Data\\Project.Data.csproj",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Data\\Project.Data.csproj",
               "RelativeToolTip": "Project.Data\\Project.Data.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -514,11 +499,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "JobService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\JobService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\JobService.cs",
               "RelativeDocumentMoniker": "Project.Service\\Services\\JobService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Services\\JobService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Services\\JobService.cs",
               "RelativeToolTip": "Project.Service\\Services\\JobService.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAkwCkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -526,11 +511,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "IJobService.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IJobService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IJobService.cs",
               "RelativeDocumentMoniker": "Project.Core\\Servises\\IJobService.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Core\\Servises\\IJobService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Servises\\IJobService.cs",
               "RelativeToolTip": "Project.Core\\Servises\\IJobService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -538,11 +523,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "Project.Service.csproj",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Project.Service.csproj",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Project.Service.csproj",
               "RelativeDocumentMoniker": "Project.Service\\Project.Service.csproj",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05EA\u05DB\u05E0\u05D5\u05EA\\\u05E9\u05E0\u05D4 \u05D1\\practicum\\Server\\Project.Service\\Project.Service.csproj",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Service\\Project.Service.csproj",
               "RelativeToolTip": "Project.Service\\Project.Service.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

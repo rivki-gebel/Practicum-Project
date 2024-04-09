@@ -9,7 +9,7 @@ namespace Project.Core.Repositories
 {
     public interface IEmployeeJobRepository
     {
-        Task<List<EmployeeJob>> GetListAsynk();
+        Task<List<EmployeeJob>> GetListAsync();
         Task<EmployeeJob> GetByIdAsync(int id);
 
         Task<EmployeeJob> AddAsync(EmployeeJob employeeJob);

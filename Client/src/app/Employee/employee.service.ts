@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject, catchError, map, tap, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, throwError } from 'rxjs';
 import { Employee } from './employeeModel';
 import { PostEmployee } from './postEmployeeModel';
 
@@ -70,7 +70,8 @@ export class EmployeeService {
   }
 
   private handleError(message: string, error: any): Observable<never> {
-    return throwError(error);
+    alert("Error: " + message);
+    return throwError(() => error);
   }
 
   getEmployeeListObservable(): Observable<Employee[]> {

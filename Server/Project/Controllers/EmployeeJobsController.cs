@@ -32,7 +32,7 @@ namespace Project.Controllers
         [HttpGet]
         public async Task<ActionResult> Get()
         {
-            var employeesJobs = await _employeeJobService.GetListAsynk();
+            var employeesJobs = await _employeeJobService.GetListAsync();
             return Ok(_mapper.Map<IEnumerable<EmployeeJobDTOown>>(employeesJobs));
         }
 

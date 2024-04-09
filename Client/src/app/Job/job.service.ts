@@ -13,5 +13,7 @@ export class JobService {
   getJobsList(): Observable<Job[]> {
     return this._http.get<Job[]>('https://localhost:7159/api/Jobs')
   }
-
+  addJob(job: Job) {
+    return this._http.post('https://localhost:7159/api/Jobs', job) 
+  }
 }

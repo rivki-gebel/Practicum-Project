@@ -10,7 +10,7 @@ import {
   MatDialogClose,
 } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { EmployeeService } from '../Employee/employee.service';
+import { EmployeeService } from '../employee/employee.service';
 import { Router } from '@angular/router';
 
 export interface DialogData {

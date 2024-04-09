@@ -78,7 +78,7 @@
             <ng-container [formGroup]="form" class="addingJobs">
                 <mat-form-field class="jobField">
                     <mat-label>job</mat-label>
-                    <mat-select formControlName="job" >
+                    <mat-select formControlName="job" (selectionChange)="onSelectionChange($event, $index)">
                         @for(job of jobs; track job){
                         <mat-option [value]="job.id"
                             [disabled]="selectedJobs.includes(job.id)">{{job.name}}</mat-option>
@@ -126,7 +126,7 @@
             <ng-template matStepLabel>Done</ng-template>
             <p class="finish-text">You are now done.</p>
             <div class="finish-buttons">
-                <button mat-button matStepperPrevious>Back</button>
+                <button [ngClass]="{ 'invalid-form-back': !editEmployeeForm.valid }" mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>
                 <button  (click)="editEmployeeForm.valid && submitForm()" type="submit" mat-raised-button color="primary">Save</button>
             </div>

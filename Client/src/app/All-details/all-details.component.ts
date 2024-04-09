@@ -2,8 +2,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { CommonModule } from '@angular/common';
 import { Observable, debounceTime, fromEvent, map, startWith } from 'rxjs';
 import { Router } from '@angular/router';
-import { Employee } from '../Employee/employeeModel';
-import { EmployeeService } from '../Employee/employee.service';
+import { Employee } from '../employee/employeeModel';
+import { EmployeeService } from '../employee/employee.service';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -91,6 +91,7 @@ export class AllDetailsComponent implements OnInit, AfterViewInit {
     event.stopPropagation();
     this._employeeService.employeeToEdit = employee;
     this.router.navigate(['/edit-employee'])
+    
   }
 
   downloadCSV() {
@@ -99,12 +100,7 @@ export class AllDetailsComponent implements OnInit, AfterViewInit {
     csvRows.push(header.join(','));
     this.employees$.subscribe(employees => {
       employees.forEach(emp => {
-        const row = [
-          emp.firstName,
-          emp.lastName,
-          emp.identityNum,
-          emp.startDate,
-        ];
+        const row = [emp.firstName, emp.lastName, emp.identityNum, emp.startDate,];
         csvRows.push(row.join(','));
       });
       const csvContent = csvRows.join('\n');

@@ -50,7 +50,7 @@ namespace Project.Data.Repositories
             existEmployee.StartDate= employee.StartDate;    
             existEmployee.IdentityNum= employee.IdentityNum;
             existEmployee.Gender= employee.Gender;
-                        
+          
             await _context.SaveChangesAsync();
             return existEmployee;
         }
