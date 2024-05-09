@@ -74,7 +74,7 @@ export class AddEmployeeComponent implements OnInit {
           this._employeeService.getEmployeesList().subscribe();
         });
       });
-      this._snackBar.open("successfully updated!", "Ok", {
+      this._snackBar.open("successfully added!", "Ok", {
         horizontalPosition: 'left',
         duration: 3000
       })

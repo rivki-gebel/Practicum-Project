@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj": {}
+    "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj": {
+    "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj",
         "projectName": "Project.Core",
-        "projectPath": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\Practicum-Project\\Server\\Project.Core\\Project.Core.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\Practicum-Project\\Server\\Project.Core\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\שנה ב\\Practicum-Project\\Server\\Project.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

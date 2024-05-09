@@ -48,3 +48,16 @@ C:\Users\user1\Desktop\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Pr
 C:\Users\user1\Desktop\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\refint\Project.Core.dll
 C:\Users\user1\Desktop\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.pdb
 C:\Users\user1\Desktop\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\ref\Project.Core.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\bin\Debug\net8.0\Project.Core.deps.json
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\bin\Debug\net8.0\Project.Core.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\bin\Debug\net8.0\Project.Core.pdb
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.sourcelink.json
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\refint\Project.Core.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\Project.Core.pdb
+C:\Users\user1\Desktop\תכנות\שנה ב\Practicum-Project\Server\Project.Core\obj\Debug\net8.0\ref\Project.Core.dll
