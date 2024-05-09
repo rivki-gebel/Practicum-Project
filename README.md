@@ -2,6 +2,14 @@
 
 This project is designed for managing the list of employees in a business in an organized and convenient way. The project is developed as part of C# and Angular learning, using advanced technologies and libraries to create an efficient and user-friendly interface.
 
+
+![screenShot1](Client/src/assets/screenShot1.png)
+
+
+
+![screenShot2](Client/src/assets/screenShot2.png)
+
+
 ## Technologies Used:
 
 ### Backend API - C# .NET 8
